@@ -1,18 +1,6 @@
 {
   "images" : [
     {
-      "orientation" : "portrait",
-      "idiom" : "ipad",
-      "extent" : "full-screen",
-      "scale" : "1x"
-    },
-    {
-      "orientation" : "portrait",
-      "idiom" : "ipad",
-      "extent" : "full-screen",
-      "scale" : "2x"
-    },
-    {
       "extent" : "full-screen",
       "idiom" : "iphone",
       "subtype" : "736h",

@@ -10,7 +10,8 @@
 
 typedef NS_ENUM(NSUInteger, BRItemType) {
     BRItemTypeLive = 1000, //展示直播
-    BRItemTypeMe //我的
+    BRItemTypeLaunch = 10, //启动直播
+    BRItemTypeMe = 1001 //我的
 };
 
 @class BRTabBar;
