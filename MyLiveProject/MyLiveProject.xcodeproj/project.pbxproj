@@ -13,6 +13,8 @@
 		C5F294D21E48B45900090B2A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5F294D01E48B45900090B2A /* LaunchScreen.storyboard */; };
 		C5F294FD1E48BEEF00090B2A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C5F294F61E48BEEF00090B2A /* AppDelegate.m */; };
 		C5F295821E4975C000090B2A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5F295811E4975C000090B2A /* ViewController.m */; };
+		C5F295861E49BFED00090B2A /* BRTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5F295851E49BFED00090B2A /* BRTabBarController.m */; };
+		C5F295AE1E49C55700090B2A /* BRTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = C5F295AD1E49C55700090B2A /* BRTabBar.m */; };
 		FDD56CE0586237BC995BDB10 /* libPods-MyLiveProject.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AFD64BD18E69B02AF032E318 /* libPods-MyLiveProject.a */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +33,11 @@
 		C5F294FF1E48E74300090B2A /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		C5F295801E4975C000090B2A /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		C5F295811E4975C000090B2A /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		C5F295831E49B0CD00090B2A /* Macros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Macros.h; sourceTree = "<group>"; };
+		C5F295841E49BFED00090B2A /* BRTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRTabBarController.h; sourceTree = "<group>"; };
+		C5F295851E49BFED00090B2A /* BRTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRTabBarController.m; sourceTree = "<group>"; };
+		C5F295AC1E49C55700090B2A /* BRTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRTabBar.h; sourceTree = "<group>"; };
+		C5F295AD1E49C55700090B2A /* BRTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRTabBar.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +129,10 @@
 		C5F294E01E48BEEF00090B2A /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				C5F295841E49BFED00090B2A /* BRTabBarController.h */,
+				C5F295851E49BFED00090B2A /* BRTabBarController.m */,
+				C5F295AC1E49C55700090B2A /* BRTabBar.h */,
+				C5F295AD1E49C55700090B2A /* BRTabBar.m */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -345,6 +356,7 @@
 		C5F2957D1E49626500090B2A /* Define */ = {
 			isa = PBXGroup;
 			children = (
+				C5F295831E49B0CD00090B2A /* Macros.h */,
 			);
 			path = Define;
 			sourceTree = "<group>";
@@ -476,6 +488,8 @@
 				C5F295821E4975C000090B2A /* ViewController.m in Sources */,
 				C5F294FD1E48BEEF00090B2A /* AppDelegate.m in Sources */,
 				C5F294C41E48B45900090B2A /* main.m in Sources */,
+				C5F295861E49BFED00090B2A /* BRTabBarController.m in Sources */,
+				C5F295AE1E49C55700090B2A /* BRTabBar.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
