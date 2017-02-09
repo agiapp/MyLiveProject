@@ -16,7 +16,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    // 设置navigationBar背景颜色
+    self.navigationBar.barTintColor = RGB(0, 216, 201, 1.0);
+    // 设置navigationBar所有子控件的颜色
+    self.navigationBar.tintColor = [UIColor whiteColor];
 }
 
 @end

@@ -18,10 +18,10 @@
 #define NAV_HEIGHT 64
 
 // RGB颜色(10进制)
-#define COLOR_RGB_DEC(r, g, b, a) [UIColor colorWithRed:(r) / 255.0 green:(g) / 255.0 blue:(b) / 255.0 alpha:(a)]
+#define RGB(r, g, b, a) [UIColor colorWithRed:(r) / 255.0 green:(g) / 255.0 blue:(b) / 255.0 alpha:(a)]
 
 // RGB颜色(16进制)
-#define COLOR_RGB_HEX(rgbValue) \
+#define RGB_HEX(rgbValue) \
 [UIColor colorWithRed:((CGFloat)((rgbValue & 0xFF0000) >> 16)) / 255.0 \
 green:((CGFloat)((rgbValue & 0xFF00) >> 8)) / 255.0 \
 blue:((CGFloat)(rgbValue & 0xFF)) / 255.0 alpha:1.0]

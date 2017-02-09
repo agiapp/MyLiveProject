@@ -22,6 +22,12 @@
 		C5F295C11E4A0E0900090B2A /* BRNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5F295C01E4A0E0900090B2A /* BRNavigationController.m */; };
 		C5F295C51E4A341000090B2A /* BRLaunchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5F295C31E4A341000090B2A /* BRLaunchViewController.m */; };
 		C5F295C61E4A341000090B2A /* BRLaunchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5F295C41E4A341000090B2A /* BRLaunchViewController.xib */; };
+		C5F296421E4B574D00090B2A /* BRFocusViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5F296401E4B574D00090B2A /* BRFocusViewController.m */; };
+		C5F296431E4B574D00090B2A /* BRFocusViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5F296411E4B574D00090B2A /* BRFocusViewController.xib */; };
+		C5F296471E4B57A200090B2A /* BRHotViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5F296451E4B57A200090B2A /* BRHotViewController.m */; };
+		C5F296481E4B57A200090B2A /* BRHotViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5F296461E4B57A200090B2A /* BRHotViewController.xib */; };
+		C5F2964C1E4B57E500090B2A /* BRNearViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5F2964A1E4B57E500090B2A /* BRNearViewController.m */; };
+		C5F2964D1E4B57E500090B2A /* BRNearViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5F2964B1E4B57E500090B2A /* BRNearViewController.xib */; };
 		FDD56CE0586237BC995BDB10 /* libPods-MyLiveProject.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AFD64BD18E69B02AF032E318 /* libPods-MyLiveProject.a */; };
 /* End PBXBuildFile section */
 
@@ -56,6 +62,15 @@
 		C5F295C21E4A341000090B2A /* BRLaunchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRLaunchViewController.h; sourceTree = "<group>"; };
 		C5F295C31E4A341000090B2A /* BRLaunchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRLaunchViewController.m; sourceTree = "<group>"; };
 		C5F295C41E4A341000090B2A /* BRLaunchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BRLaunchViewController.xib; sourceTree = "<group>"; };
+		C5F2963F1E4B574D00090B2A /* BRFocusViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRFocusViewController.h; sourceTree = "<group>"; };
+		C5F296401E4B574D00090B2A /* BRFocusViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRFocusViewController.m; sourceTree = "<group>"; };
+		C5F296411E4B574D00090B2A /* BRFocusViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BRFocusViewController.xib; sourceTree = "<group>"; };
+		C5F296441E4B57A200090B2A /* BRHotViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRHotViewController.h; sourceTree = "<group>"; };
+		C5F296451E4B57A200090B2A /* BRHotViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRHotViewController.m; sourceTree = "<group>"; };
+		C5F296461E4B57A200090B2A /* BRHotViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BRHotViewController.xib; sourceTree = "<group>"; };
+		C5F296491E4B57E500090B2A /* BRNearViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRNearViewController.h; sourceTree = "<group>"; };
+		C5F2964A1E4B57E500090B2A /* BRNearViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRNearViewController.m; sourceTree = "<group>"; };
+		C5F2964B1E4B57E500090B2A /* BRNearViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BRNearViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -360,6 +375,15 @@
 				C5F295B51E4A096D00090B2A /* BRMainViewController.h */,
 				C5F295B61E4A096D00090B2A /* BRMainViewController.m */,
 				C5F295B71E4A096D00090B2A /* BRMainViewController.xib */,
+				C5F2963F1E4B574D00090B2A /* BRFocusViewController.h */,
+				C5F296401E4B574D00090B2A /* BRFocusViewController.m */,
+				C5F296411E4B574D00090B2A /* BRFocusViewController.xib */,
+				C5F296441E4B57A200090B2A /* BRHotViewController.h */,
+				C5F296451E4B57A200090B2A /* BRHotViewController.m */,
+				C5F296461E4B57A200090B2A /* BRHotViewController.xib */,
+				C5F296491E4B57E500090B2A /* BRNearViewController.h */,
+				C5F2964A1E4B57E500090B2A /* BRNearViewController.m */,
+				C5F2964B1E4B57E500090B2A /* BRNearViewController.xib */,
 				C5F295BA1E4A09B100090B2A /* BRMeViewController.h */,
 				C5F295BB1E4A09B100090B2A /* BRMeViewController.m */,
 				C5F295BC1E4A09B100090B2A /* BRMeViewController.xib */,
@@ -454,10 +478,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				C5F294D21E48B45900090B2A /* LaunchScreen.storyboard in Resources */,
+				C5F2964D1E4B57E500090B2A /* BRNearViewController.xib in Resources */,
 				C5F295C61E4A341000090B2A /* BRLaunchViewController.xib in Resources */,
+				C5F296431E4B574D00090B2A /* BRFocusViewController.xib in Resources */,
 				C5F295BE1E4A09B100090B2A /* BRMeViewController.xib in Resources */,
 				C5F295B91E4A096D00090B2A /* BRMainViewController.xib in Resources */,
 				C5F294CF1E48B45900090B2A /* Assets.xcassets in Resources */,
+				C5F296481E4B57A200090B2A /* BRHotViewController.xib in Resources */,
 				C5F294CD1E48B45900090B2A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -518,13 +545,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				C5F295B41E4A092700090B2A /* BaseViewController.m in Sources */,
+				C5F296421E4B574D00090B2A /* BRFocusViewController.m in Sources */,
 				C5F295C51E4A341000090B2A /* BRLaunchViewController.m in Sources */,
 				C5F294FD1E48BEEF00090B2A /* AppDelegate.m in Sources */,
 				C5F294C41E48B45900090B2A /* main.m in Sources */,
 				C5F295C11E4A0E0900090B2A /* BRNavigationController.m in Sources */,
 				C5F295BD1E4A09B100090B2A /* BRMeViewController.m in Sources */,
+				C5F296471E4B57A200090B2A /* BRHotViewController.m in Sources */,
 				C5F295B81E4A096D00090B2A /* BRMainViewController.m in Sources */,
 				C5F295861E49BFED00090B2A /* BRTabBarController.m in Sources */,
+				C5F2964C1E4B57E500090B2A /* BRNearViewController.m in Sources */,
 				C5F295AE1E49C55700090B2A /* BRTabBar.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

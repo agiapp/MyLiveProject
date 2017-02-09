@@ -6,9 +6,8 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BRMainViewController">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BRNearViewController">
             <connections>
-                <outlet property="scrollView" destination="tcm-ay-t4u" id="ikr-U9-3Oc"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -17,19 +16,15 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tcm-ay-t4u">
-                    <connections>
-                        <outlet property="delegate" destination="-1" id="HuT-GM-s4A"/>
-                    </connections>
-                </scrollView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="3.附近页面" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rbj-IA-THl">
+                    <frame key="frameInset" minX="139" minY="233" width="84" height="21"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-            <constraints>
-                <constraint firstItem="tcm-ay-t4u" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="aAQ-j2-1E0"/>
-                <constraint firstAttribute="trailing" secondItem="tcm-ay-t4u" secondAttribute="trailing" id="bOH-iO-6fs"/>
-                <constraint firstAttribute="bottom" secondItem="tcm-ay-t4u" secondAttribute="bottom" id="x7S-Ju-VpO"/>
-                <constraint firstItem="tcm-ay-t4u" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="zub-VQ-blx"/>
-            </constraints>
         </view>
     </objects>
 </document>

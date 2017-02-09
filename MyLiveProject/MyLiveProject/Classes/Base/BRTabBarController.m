@@ -55,7 +55,7 @@
         self.selectedIndex = index - BRItemTypeLive;
         return;
     }
-    
+    // 弹出启动直播页面
     BRLaunchViewController *launchVC = [[BRLaunchViewController alloc]init];
     [self presentViewController:launchVC animated:YES completion:nil];
     

@@ -16,7 +16,6 @@
 @property (nonatomic, strong) UIImageView *bgImageView;
 // tabbar中间按钮
 @property (nonatomic, strong) UIButton *middleBtn;
-
 // 图标数组
 @property (nonatomic, strong) NSArray *iconArr;
 
@@ -110,13 +109,13 @@
     button.selected = YES;
     lastBtn = button;
 
-    // 设置动画
-    [self startAnimation:button];
+    // 设置缩放动画
+    [self startScaleAnimation:button];
     
 }
 
-// 设置动画
-- (void)startAnimation:(UIView *)view {
+/** 设置缩放动画 */
+- (void)startScaleAnimation:(UIView *)view {
     // 放大动画
     [UIView animateWithDuration:0.2 animations:^{
         view.transform = CGAffineTransformMakeScale(1.2, 1.2); //等比放大1.2倍
