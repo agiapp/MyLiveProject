@@ -28,6 +28,7 @@
 		C5F296481E4B57A200090B2A /* BRHotViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5F296461E4B57A200090B2A /* BRHotViewController.xib */; };
 		C5F2964C1E4B57E500090B2A /* BRNearViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5F2964A1E4B57E500090B2A /* BRNearViewController.m */; };
 		C5F2964D1E4B57E500090B2A /* BRNearViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5F2964B1E4B57E500090B2A /* BRNearViewController.xib */; };
+		C5F296501E4C368800090B2A /* BRSlideMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = C5F2964F1E4C368800090B2A /* BRSlideMenuView.m */; };
 		FDD56CE0586237BC995BDB10 /* libPods-MyLiveProject.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AFD64BD18E69B02AF032E318 /* libPods-MyLiveProject.a */; };
 /* End PBXBuildFile section */
 
@@ -71,6 +72,8 @@
 		C5F296491E4B57E500090B2A /* BRNearViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRNearViewController.h; sourceTree = "<group>"; };
 		C5F2964A1E4B57E500090B2A /* BRNearViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRNearViewController.m; sourceTree = "<group>"; };
 		C5F2964B1E4B57E500090B2A /* BRNearViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BRNearViewController.xib; sourceTree = "<group>"; };
+		C5F2964E1E4C368800090B2A /* BRSlideMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRSlideMenuView.h; sourceTree = "<group>"; };
+		C5F2964F1E4C368800090B2A /* BRSlideMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRSlideMenuView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -365,6 +368,8 @@
 		C5F294FA1E48BEEF00090B2A /* View */ = {
 			isa = PBXGroup;
 			children = (
+				C5F2964E1E4C368800090B2A /* BRSlideMenuView.h */,
+				C5F2964F1E4C368800090B2A /* BRSlideMenuView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -556,6 +561,7 @@
 				C5F295861E49BFED00090B2A /* BRTabBarController.m in Sources */,
 				C5F2964C1E4B57E500090B2A /* BRNearViewController.m in Sources */,
 				C5F295AE1E49C55700090B2A /* BRTabBar.m in Sources */,
+				C5F296501E4C368800090B2A /* BRSlideMenuView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

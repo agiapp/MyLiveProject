@@ -60,7 +60,7 @@
 }
 
 #pragma mark - UIScrollViewDelegate
-/** 滑动scrollView 减速结束时（即结束滑动时） 调用的代理方法 */
+/** 滑动scrollView 减速结束时（即结束滑动时）调用的代理方法 */
 // 用于处理加载子控制器view
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
     CGFloat offsetX = scrollView.contentOffset.x;
