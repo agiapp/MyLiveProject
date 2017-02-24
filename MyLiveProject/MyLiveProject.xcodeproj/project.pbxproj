@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C517D2991E60965700A87C10 /* BRLiveModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C517D2981E60965700A87C10 /* BRLiveModel.m */; };
+		C517D29C1E6096B800A87C10 /* BRCreatorModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C517D29B1E6096B800A87C10 /* BRCreatorModel.m */; };
+		C5270DFF1E5FD8E3009536BE /* NSObject+BRParse.m in Sources */ = {isa = PBXBuildFile; fileRef = C5270DFE1E5FD8E3009536BE /* NSObject+BRParse.m */; };
+		C54A3EEF1E5C8CB2008FF367 /* BaseHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = C54A3EEE1E5C8CB2008FF367 /* BaseHandler.m */; };
+		C54A3EF41E5C92E6008FF367 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C54A3EF31E5C92E6008FF367 /* Assets.xcassets */; };
+		C54A3EF81E5C9BBC008FF367 /* BRLiveHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = C54A3EF71E5C9BBC008FF367 /* BRLiveHandler.m */; };
+		C54A3F001E5C9CC2008FF367 /* HttpTool.m in Sources */ = {isa = PBXBuildFile; fileRef = C54A3EFF1E5C9CC2008FF367 /* HttpTool.m */; };
+		C54A3F0A1E5CA314008FF367 /* UIImageView+WebImage.m in Sources */ = {isa = PBXBuildFile; fileRef = C54A3F081E5CA314008FF367 /* UIImageView+WebImage.m */; };
 		C5F294C41E48B45900090B2A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C5F294C31E48B45900090B2A /* main.m */; };
 		C5F294CD1E48B45900090B2A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5F294CB1E48B45900090B2A /* Main.storyboard */; };
 		C5F294CF1E48B45900090B2A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C5F294CE1E48B45900090B2A /* Assets.xcassets */; };
@@ -36,6 +44,23 @@
 		18E1DC9A515C5F9AF38D0635 /* Pods-MyLiveProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyLiveProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyLiveProject/Pods-MyLiveProject.debug.xcconfig"; sourceTree = "<group>"; };
 		4595A1EFEAFBC47221D7DA22 /* Pods-MyLiveProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyLiveProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyLiveProject/Pods-MyLiveProject.release.xcconfig"; sourceTree = "<group>"; };
 		AFD64BD18E69B02AF032E318 /* libPods-MyLiveProject.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MyLiveProject.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C517D2971E60965700A87C10 /* BRLiveModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRLiveModel.h; sourceTree = "<group>"; };
+		C517D2981E60965700A87C10 /* BRLiveModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRLiveModel.m; sourceTree = "<group>"; };
+		C517D29A1E6096B800A87C10 /* BRCreatorModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRCreatorModel.h; sourceTree = "<group>"; };
+		C517D29B1E6096B800A87C10 /* BRCreatorModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRCreatorModel.m; sourceTree = "<group>"; };
+		C5270DFD1E5FD8E3009536BE /* NSObject+BRParse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+BRParse.h"; sourceTree = "<group>"; };
+		C5270DFE1E5FD8E3009536BE /* NSObject+BRParse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+BRParse.m"; sourceTree = "<group>"; };
+		C54A3EED1E5C8CB2008FF367 /* BaseHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseHandler.h; sourceTree = "<group>"; };
+		C54A3EEE1E5C8CB2008FF367 /* BaseHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseHandler.m; sourceTree = "<group>"; };
+		C54A3EF31E5C92E6008FF367 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = MyLiveProject/Assets.xcassets; sourceTree = SOURCE_ROOT; };
+		C54A3EF61E5C9BBC008FF367 /* BRLiveHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRLiveHandler.h; sourceTree = "<group>"; };
+		C54A3EF71E5C9BBC008FF367 /* BRLiveHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRLiveHandler.m; sourceTree = "<group>"; };
+		C54A3EFE1E5C9CC2008FF367 /* HttpTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpTool.h; sourceTree = "<group>"; };
+		C54A3EFF1E5C9CC2008FF367 /* HttpTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpTool.m; sourceTree = "<group>"; };
+		C54A3F031E5CA2D8008FF367 /* APIConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIConfig.h; sourceTree = "<group>"; };
+		C54A3F041E5CA2D8008FF367 /* Macros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Macros.h; sourceTree = "<group>"; };
+		C54A3F071E5CA314008FF367 /* UIImageView+WebImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+WebImage.h"; sourceTree = "<group>"; };
+		C54A3F081E5CA314008FF367 /* UIImageView+WebImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+WebImage.m"; sourceTree = "<group>"; };
 		C5F294BF1E48B45900090B2A /* MyLiveProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyLiveProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5F294C31E48B45900090B2A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C5F294CC1E48B45900090B2A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -45,7 +70,6 @@
 		C5F294F51E48BEEF00090B2A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C5F294F61E48BEEF00090B2A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		C5F294FF1E48E74300090B2A /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
-		C5F295831E49B0CD00090B2A /* Macros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Macros.h; sourceTree = "<group>"; };
 		C5F295841E49BFED00090B2A /* BRTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRTabBarController.h; sourceTree = "<group>"; };
 		C5F295851E49BFED00090B2A /* BRTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRTabBarController.m; sourceTree = "<group>"; };
 		C5F295AC1E49C55700090B2A /* BRTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRTabBar.h; sourceTree = "<group>"; };
@@ -105,6 +129,71 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		C54A3EF51E5C9BBC008FF367 /* Handler */ = {
+			isa = PBXGroup;
+			children = (
+				C54A3EF61E5C9BBC008FF367 /* BRLiveHandler.h */,
+				C54A3EF71E5C9BBC008FF367 /* BRLiveHandler.m */,
+			);
+			path = Handler;
+			sourceTree = "<group>";
+		};
+		C54A3EFD1E5C9CC2008FF367 /* NetWork */ = {
+			isa = PBXGroup;
+			children = (
+				C54A3EFE1E5C9CC2008FF367 /* HttpTool.h */,
+				C54A3EFF1E5C9CC2008FF367 /* HttpTool.m */,
+			);
+			path = NetWork;
+			sourceTree = "<group>";
+		};
+		C54A3F011E5C9D6D008FF367 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C517D2971E60965700A87C10 /* BRLiveModel.h */,
+				C517D2981E60965700A87C10 /* BRLiveModel.m */,
+				C517D29A1E6096B800A87C10 /* BRCreatorModel.h */,
+				C517D29B1E6096B800A87C10 /* BRCreatorModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C54A3F021E5CA2D8008FF367 /* Define */ = {
+			isa = PBXGroup;
+			children = (
+				C54A3F041E5CA2D8008FF367 /* Macros.h */,
+				C54A3F031E5CA2D8008FF367 /* APIConfig.h */,
+			);
+			path = Define;
+			sourceTree = "<group>";
+		};
+		C54A3F051E5CA314008FF367 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				C54A3F061E5CA314008FF367 /* Category */,
+				C54A3F091E5CA314008FF367 /* Tools */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		C54A3F061E5CA314008FF367 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				C54A3F071E5CA314008FF367 /* UIImageView+WebImage.h */,
+				C54A3F081E5CA314008FF367 /* UIImageView+WebImage.m */,
+				C5270DFD1E5FD8E3009536BE /* NSObject+BRParse.h */,
+				C5270DFE1E5FD8E3009536BE /* NSObject+BRParse.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		C54A3F091E5CA314008FF367 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
 		C5F294B61E48B45900090B2A = {
 			isa = PBXGroup;
 			children = (
@@ -147,14 +236,14 @@
 		C5F294DF1E48BEEF00090B2A /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				C5F2957D1E49626500090B2A /* Define */,
+				C54A3F021E5CA2D8008FF367 /* Define */,
 				C5F294E01E48BEEF00090B2A /* Base */,
-				C5F294F31E48BEEF00090B2A /* NetWork */,
+				C54A3EFD1E5C9CC2008FF367 /* NetWork */,
 				C5F294F71E48BEEF00090B2A /* Show(展示) */,
 				C5F294E91E48BEEF00090B2A /* Live(播放直播) */,
 				C5F294EE1E48BEEF00090B2A /* Me(我的) */,
 				C5F294E41E48BEEF00090B2A /* Launch(播放) */,
-				C5F294E11E48BEEF00090B2A /* Helper */,
+				C54A3F051E5CA314008FF367 /* Helper */,
 				C5F2957C1E49608800090B2A /* Resource */,
 				C5F294FC1E48BEEF00090B2A /* Vendor */,
 				C5F294F41E48BEEF00090B2A /* Other */,
@@ -167,6 +256,8 @@
 			children = (
 				C5F295B21E4A092700090B2A /* BaseViewController.h */,
 				C5F295B31E4A092700090B2A /* BaseViewController.m */,
+				C54A3EED1E5C8CB2008FF367 /* BaseHandler.h */,
+				C54A3EEE1E5C8CB2008FF367 /* BaseHandler.m */,
 				C5F295BF1E4A0E0900090B2A /* BRNavigationController.h */,
 				C5F295C01E4A0E0900090B2A /* BRNavigationController.m */,
 				C5F295841E49BFED00090B2A /* BRTabBarController.h */,
@@ -175,29 +266,6 @@
 				C5F295AD1E49C55700090B2A /* BRTabBar.m */,
 			);
 			path = Base;
-			sourceTree = "<group>";
-		};
-		C5F294E11E48BEEF00090B2A /* Helper */ = {
-			isa = PBXGroup;
-			children = (
-				C5F294E21E48BEEF00090B2A /* Category */,
-				C5F294E31E48BEEF00090B2A /* Tools */,
-			);
-			path = Helper;
-			sourceTree = "<group>";
-		};
-		C5F294E21E48BEEF00090B2A /* Category */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Category;
-			sourceTree = "<group>";
-		};
-		C5F294E31E48BEEF00090B2A /* Tools */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Tools;
 			sourceTree = "<group>";
 		};
 		C5F294E41E48BEEF00090B2A /* Launch(播放) */ = {
@@ -323,13 +391,6 @@
 			path = ViewController;
 			sourceTree = "<group>";
 		};
-		C5F294F31E48BEEF00090B2A /* NetWork */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = NetWork;
-			sourceTree = "<group>";
-		};
 		C5F294F41E48BEEF00090B2A /* Other */ = {
 			isa = PBXGroup;
 			children = (
@@ -342,27 +403,13 @@
 		C5F294F71E48BEEF00090B2A /* Show(展示) */ = {
 			isa = PBXGroup;
 			children = (
-				C5F294F81E48BEEF00090B2A /* Handler */,
-				C5F294F91E48BEEF00090B2A /* Model */,
+				C54A3EF51E5C9BBC008FF367 /* Handler */,
+				C54A3F011E5C9D6D008FF367 /* Model */,
 				C5F294FA1E48BEEF00090B2A /* View */,
 				C5F294FB1E48BEEF00090B2A /* ViewController */,
 			);
 			name = "Show(展示)";
 			path = Show;
-			sourceTree = "<group>";
-		};
-		C5F294F81E48BEEF00090B2A /* Handler */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Handler;
-			sourceTree = "<group>";
-		};
-		C5F294F91E48BEEF00090B2A /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		C5F294FA1E48BEEF00090B2A /* View */ = {
@@ -409,14 +456,6 @@
 				C5F294CE1E48B45900090B2A /* Assets.xcassets */,
 			);
 			path = Resource;
-			sourceTree = "<group>";
-		};
-		C5F2957D1E49626500090B2A /* Define */ = {
-			isa = PBXGroup;
-			children = (
-				C5F295831E49B0CD00090B2A /* Macros.h */,
-			);
-			path = Define;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -486,6 +525,7 @@
 				C5F2964D1E4B57E500090B2A /* BRNearViewController.xib in Resources */,
 				C5F295C61E4A341000090B2A /* BRLaunchViewController.xib in Resources */,
 				C5F296431E4B574D00090B2A /* BRFocusViewController.xib in Resources */,
+				C54A3EF41E5C92E6008FF367 /* Assets.xcassets in Resources */,
 				C5F295BE1E4A09B100090B2A /* BRMeViewController.xib in Resources */,
 				C5F295B91E4A096D00090B2A /* BRMainViewController.xib in Resources */,
 				C5F294CF1E48B45900090B2A /* Assets.xcassets in Resources */,
@@ -550,11 +590,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				C5F295B41E4A092700090B2A /* BaseViewController.m in Sources */,
+				C54A3EEF1E5C8CB2008FF367 /* BaseHandler.m in Sources */,
+				C54A3F001E5C9CC2008FF367 /* HttpTool.m in Sources */,
 				C5F296421E4B574D00090B2A /* BRFocusViewController.m in Sources */,
+				C517D29C1E6096B800A87C10 /* BRCreatorModel.m in Sources */,
 				C5F295C51E4A341000090B2A /* BRLaunchViewController.m in Sources */,
 				C5F294FD1E48BEEF00090B2A /* AppDelegate.m in Sources */,
 				C5F294C41E48B45900090B2A /* main.m in Sources */,
+				C5270DFF1E5FD8E3009536BE /* NSObject+BRParse.m in Sources */,
 				C5F295C11E4A0E0900090B2A /* BRNavigationController.m in Sources */,
+				C517D2991E60965700A87C10 /* BRLiveModel.m in Sources */,
+				C54A3F0A1E5CA314008FF367 /* UIImageView+WebImage.m in Sources */,
 				C5F295BD1E4A09B100090B2A /* BRMeViewController.m in Sources */,
 				C5F296471E4B57A200090B2A /* BRHotViewController.m in Sources */,
 				C5F295B81E4A096D00090B2A /* BRMainViewController.m in Sources */,
@@ -562,6 +608,7 @@
 				C5F2964C1E4B57E500090B2A /* BRNearViewController.m in Sources */,
 				C5F295AE1E49C55700090B2A /* BRTabBar.m in Sources */,
 				C5F296501E4C368800090B2A /* BRSlideMenuView.m in Sources */,
+				C54A3EF81E5C9BBC008FF367 /* BRLiveHandler.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

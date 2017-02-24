@@ -7,6 +7,7 @@
 //
 
 #import "BRHotViewController.h"
+#import "BRLiveHandler.h"
 
 @interface BRHotViewController ()
 
@@ -16,22 +17,24 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    // 1. 初始化UI
+    [self initUI];
+    // 2. 加载数据
+    [self loadData];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+#pragma mark - 第1步：初始化UI
+- (void)initUI {
+
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+#pragma mark - 第2步：加载数据
+- (void)loadData {
+    [BRLiveHandler executeGetHotLiveTaskWithSuccess:^(id obj) {
+        MYLog(@"请求热门直播的信息：%@", obj);
+    } failed:^(id error) {
+        MYLog(@"请求错误：%@", error);
+    }];
 }
-*/
 
 @end
