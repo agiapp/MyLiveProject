@@ -13,6 +13,8 @@
 #import "APIConfig.h"
 #import <Masonry.h>
 #import <YYKit.h>
+#import "NSObject+BRParse.h"
+#import "UIImageView+WebImage.h"
 
 
 #endif /* PrefixHeader_pch */

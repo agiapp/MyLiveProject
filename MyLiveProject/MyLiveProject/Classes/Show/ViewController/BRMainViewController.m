@@ -10,7 +10,7 @@
 #import "BRSlideMenuView.h"
 
 @interface BRMainViewController ()<UIScrollViewDelegate>
-@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
+@property (nonatomic, strong) UIScrollView *scrollView;
 @property (nonatomic, strong) BRSlideMenuView *slideMenuView;
 @property (nonatomic, strong) NSArray *menuTitleArr;
 
@@ -27,6 +27,7 @@
 - (void)initUI {
     // 添加导航栏的左右按钮
     [self setupNav];
+    [self.view addSubview:self.scrollView];
     // 添加子视图控制器
     [self setupChildViewControllers];
     
@@ -74,7 +75,7 @@
 - (void)loadChildControllerView:(UIScrollView *)superView {
     CGFloat offsetX = superView.contentOffset.x;
     CGFloat width = SCREEN_WIDTH;
-    CGFloat height = SCREEN_HEIGHT;
+    CGFloat height = SCREEN_HEIGHT - 64 - 49;
     // 滑动到哪里，加载到哪里，获取当前加载页的index
     NSInteger index = offsetX / width;
     // 让菜单栏的下划线视图滚动，保持与scrollView联动
@@ -88,9 +89,19 @@
     }
     /// 2.如果没有加载过就添加
     // 设置子控制器view的frame大小
-    vc.view.frame = CGRectMake(offsetX, 0, width, height);
+    vc.view.frame = CGRectMake(offsetX, 0, superView.frame.size.width, height);
     // 将子控制器的view添加到scrollView上
     [superView addSubview:vc.view];
+}
+
+#pragma mark - 懒加载视图
+- (UIScrollView *)scrollView {
+    if (!_scrollView) {
+        _scrollView = [[UIScrollView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT)];
+        _scrollView.pagingEnabled = YES;
+        _scrollView.delegate = self;
+    }
+    return _scrollView;
 }
 
 - (BRSlideMenuView *)slideMenuView {

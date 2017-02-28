@@ -13,6 +13,7 @@ typedef void(^DownloadImageFailedBlock)(NSError *error);
 typedef void(^DownloadImageProgressBlock)(CGFloat progress);
 
 @interface UIImageView (WebImage)
+
 /**
  *  异步加载图片
  *

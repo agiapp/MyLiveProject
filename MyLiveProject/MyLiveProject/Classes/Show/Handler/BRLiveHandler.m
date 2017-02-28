@@ -8,6 +8,7 @@
 
 #import "BRLiveHandler.h"
 #import "HttpTool.h"
+#import "BRLiveModel.h"
 
 @implementation BRLiveHandler
 #pragma mark - 获取热门直播信息
@@ -19,8 +20,10 @@
         NSInteger status = [jsonObj[@"dm_error"] integerValue];
         MYLog(@"error_msg = %@", jsonObj[@"error_msg"]);
         if (status == 0) {
-            // 如果操作成功(返回数组正确)，要做数据解析
-            success(jsonObj);
+            // 如果操作成功，先做数据解析，再返回解析结果
+            MYLog(@"请求热门直播的信息：%@", jsonObj);
+            NSArray *liveModelArr = [BRLiveModel parse:jsonObj[@"lives"]];
+            success(liveModelArr);
         } else {
             failed(jsonObj); // 回传服务器返回的错误信息
         }

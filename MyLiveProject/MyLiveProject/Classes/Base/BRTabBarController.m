@@ -26,6 +26,7 @@
     [self.tabBar addSubview:self.myTabBar];
     // 清除TabBar的阴影线
     [UITabBar appearance].shadowImage = [[UIImage alloc]init];
+    [UITabBar appearance].backgroundImage = [UIImage new];
     
 }
 

@@ -13,7 +13,7 @@
 #define SERVER_HOST @"http://service.inke.com"
 
 //图片服务器地址
-#define IMAGE_HOST @"http://img2.inke.cn"
+#define IMAGE_HOST @"http://img2.inke.cn/"
 
 //banner
 #define API_Feed @"api/feed/gather" //?uid=391980701&sid=20KnpRG0X7hiB3Lck8yUYWVnXsp4ux9MoLzi2phoQOAjyuSU5Ms
