@@ -16,6 +16,7 @@
 		C54A3EF81E5C9BBC008FF367 /* BRLiveHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = C54A3EF71E5C9BBC008FF367 /* BRLiveHandler.m */; };
 		C54A3F001E5C9CC2008FF367 /* HttpTool.m in Sources */ = {isa = PBXBuildFile; fileRef = C54A3EFF1E5C9CC2008FF367 /* HttpTool.m */; };
 		C54A3F0A1E5CA314008FF367 /* UIImageView+WebImage.m in Sources */ = {isa = PBXBuildFile; fileRef = C54A3F081E5CA314008FF367 /* UIImageView+WebImage.m */; };
+		C58C6AD61E66CEFA00BF0E4D /* UIImage+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = C58C6AD51E66CEFA00BF0E4D /* UIImage+Extension.m */; };
 		C5E502881E61A6D3003F1943 /* BRLiveCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C5E502871E61A6D3003F1943 /* BRLiveCell.m */; };
 		C5E5028B1E61F765003F1943 /* NSString+Check.m in Sources */ = {isa = PBXBuildFile; fileRef = C5E5028A1E61F765003F1943 /* NSString+Check.m */; };
 		C5E5028E1E62A457003F1943 /* BRMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5E5028D1E62A457003F1943 /* BRMainViewController.m */; };
@@ -60,6 +61,8 @@
 		C54A3F041E5CA2D8008FF367 /* Macros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Macros.h; sourceTree = "<group>"; };
 		C54A3F071E5CA314008FF367 /* UIImageView+WebImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+WebImage.h"; sourceTree = "<group>"; };
 		C54A3F081E5CA314008FF367 /* UIImageView+WebImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+WebImage.m"; sourceTree = "<group>"; };
+		C58C6AD41E66CEFA00BF0E4D /* UIImage+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Extension.h"; sourceTree = "<group>"; };
+		C58C6AD51E66CEFA00BF0E4D /* UIImage+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Extension.m"; sourceTree = "<group>"; };
 		C5E502861E61A6D3003F1943 /* BRLiveCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRLiveCell.h; sourceTree = "<group>"; };
 		C5E502871E61A6D3003F1943 /* BRLiveCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRLiveCell.m; sourceTree = "<group>"; };
 		C5E502891E61F765003F1943 /* NSString+Check.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Check.h"; sourceTree = "<group>"; };
@@ -182,6 +185,8 @@
 				C5270DFE1E5FD8E3009536BE /* NSObject+BRParse.m */,
 				C5E502891E61F765003F1943 /* NSString+Check.h */,
 				C5E5028A1E61F765003F1943 /* NSString+Check.m */,
+				C58C6AD41E66CEFA00BF0E4D /* UIImage+Extension.h */,
+				C58C6AD51E66CEFA00BF0E4D /* UIImage+Extension.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -595,6 +600,7 @@
 				C5E5029A1E62D9C1003F1943 /* BRMeViewController.m in Sources */,
 				C5E502881E61A6D3003F1943 /* BRLiveCell.m in Sources */,
 				C517D2991E60965700A87C10 /* BRLiveModel.m in Sources */,
+				C58C6AD61E66CEFA00BF0E4D /* UIImage+Extension.m in Sources */,
 				C54A3F0A1E5CA314008FF367 /* UIImageView+WebImage.m in Sources */,
 				C5E502971E62D95D003F1943 /* BRNearViewController.m in Sources */,
 				C5F295861E49BFED00090B2A /* BRTabBarController.m in Sources */,

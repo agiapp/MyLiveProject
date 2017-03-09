@@ -11,6 +11,7 @@
 #import "NSString+Check.h"
 
 @interface BRLiveCell ()
+
 @property (nonatomic, strong) UIView *bgView;
 @property (nonatomic, strong) UIImageView *headImageView;
 @property (nonatomic, strong) UILabel *nameLabel;
@@ -21,6 +22,7 @@
 @property (nonatomic, strong) UIImageView *liveImageView;
 
 @end
+
 @implementation BRLiveCell
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
     if ([super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
@@ -52,7 +54,6 @@
 }
 
 #pragma mark - 懒加载
-
 - (UIView *)bgView {
     if (!_bgView) {
         _bgView = [[UIView alloc]init];

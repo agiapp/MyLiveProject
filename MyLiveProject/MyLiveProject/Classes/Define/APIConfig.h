@@ -10,7 +10,7 @@
 #define APIConfig_h
 
 //信息类服务器地址
-#define SERVER_HOST @"http://service.inke.com"
+#define SERVER_HOST @"http://service.inke.com" // http://service.ingkee.com
 
 //图片服务器地址
 #define IMAGE_HOST @"http://img2.inke.cn/"
