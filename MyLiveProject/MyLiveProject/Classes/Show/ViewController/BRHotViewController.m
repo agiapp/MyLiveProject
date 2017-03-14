@@ -9,6 +9,9 @@
 #import "BRHotViewController.h"
 #import "BRLiveHandler.h"
 #import "BRLiveCell.h"
+#import "BRLiveModel.h"
+//#import <MediaPlayer/MediaPlayer.h> 系统提供的播放器
+#import "BRPlayerViewController.h"
 
 @interface BRHotViewController ()<UITableViewDataSource, UITableViewDelegate>
 @property (nonatomic, strong) UITableView *tableView;
@@ -75,6 +78,16 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    BRLiveModel *model = self.liveModelArr[indexPath.row];
+/**
+    // 使用系统自带的播放器去播放直播视频，播放不了，因为解码不了，不支持播放rtmp。
+    MPMoviePlayerViewController *movieVC = [[MPMoviePlayerViewController alloc]initWithContentURL:[NSURL URLWithString:model.streamAddr]];
+    [self presentViewController:movieVC animated:YES completion:nil];
+*/
+    BRPlayerViewController *playVC = [[BRPlayerViewController alloc]init];
+    playVC.model = model;
+//    [self presentViewController:playVC animated:YES completion:nil];
+    [self.navigationController pushViewController:playVC animated:YES];
 }
 
 - (NSMutableArray *)liveModelArr {
