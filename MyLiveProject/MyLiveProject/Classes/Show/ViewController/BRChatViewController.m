@@ -49,7 +49,7 @@
 
 - (void)setModel:(BRLiveModel *)model {
     _model = model;
-    [self.headImageView downloadImage:model.creator.portrait placeholder:@"default_room"];
+    [self.headImageView br_setImageWithPath:model.creator.portrait placeholder:@"default_room"];
     // YYKit中封装的定时器方法（每隔3秒执行一下block中的内容）
     [NSTimer scheduledTimerWithTimeInterval:2 block:^(NSTimer * _Nonnull timer) {
         self.onlineUsersLabel.text = [NSString stringWithFormat:@"%d", arc4random_uniform(20000)];

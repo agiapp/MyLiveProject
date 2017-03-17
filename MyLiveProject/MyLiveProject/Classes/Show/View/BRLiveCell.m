@@ -43,14 +43,14 @@
 // 重写setter方法给属性赋值
 - (void)setModel:(BRLiveModel *)model {
     _model = model;
-    [self.headImageView downloadImage:model.creator.portrait placeholder:@"default_room"];
+    [self.headImageView br_setImageWithPath:model.creator.portrait placeholder:@"default_room"];
     self.nameLabel.text = model.creator.nick;
     if ([NSString isBlankString:model.city]) {
         model.city = @"难道在火星?";
     }
     self.locationLabel.text = [NSString stringWithFormat:@"%@ >", model.city];
     self.onLineLabel.text = [@(model.onlineUsers) stringValue];
-    [self.bigImageView downloadImage:model.creator.portrait placeholder:@"default_room"];
+    [self.bigImageView br_setImageWithPath:model.creator.portrait placeholder:@"default_room"];
 }
 
 #pragma mark - 懒加载
