@@ -9,6 +9,7 @@
 #import "UIImage+Extension.h"
 
 @implementation UIImage (Extension)
+
 - (UIImage *)imageWithCornerRadius:(CGFloat)radius {
     CGRect rect = (CGRect){0.f, 0.f, self.size};
     UIGraphicsBeginImageContextWithOptions(self.size, NO, UIScreen.mainScreen.scale);

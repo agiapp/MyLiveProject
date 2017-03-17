@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface UIImage (Extension)
+
 /** 给图片添加圆角(系统的添加圆角方法比较耗性能，推荐用这个) */
 - (UIImage *)imageWithCornerRadius:(CGFloat)radius;
 
