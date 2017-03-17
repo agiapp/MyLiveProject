@@ -12,17 +12,17 @@
 @implementation UIImageView (WebImage)
 
 #pragma mark - 异步加载图片
-- (void)downloadImage:(NSString *)url placeholder:(NSString *)imageName {
-    [self sd_setImageWithURL:[NSURL URLWithString:url] placeholderImage:[UIImage imageNamed:imageName] options:SDWebImageRetryFailed|SDWebImageLowPriority];
+- (void)br_setImageWithPath:(NSString *)path placeholder:(NSString *)imageName {
+    [self sd_setImageWithURL:[NSURL URLWithString:path] placeholderImage:[UIImage imageNamed:imageName] options:SDWebImageRetryFailed|SDWebImageLowPriority];
 }
 
 #pragma mark - 异步加载图片，可以监听下载进度，成功或失败
-- (void)downloadImage:(NSString *)url
+- (void)br_setImageWithPath:(NSString *)path
           placeholder:(NSString *)imageName
               success:(DownloadImageSuccessBlock)success
                failed:(DownloadImageFailedBlock)failed
              progress:(DownloadImageProgressBlock)progress {
-    [self sd_setImageWithURL:[NSURL URLWithString:url] placeholderImage:[UIImage imageNamed:imageName] options:SDWebImageRetryFailed|SDWebImageLowPriority progress:^(NSInteger receivedSize, NSInteger expectedSize) {
+    [self sd_setImageWithURL:[NSURL URLWithString:path] placeholderImage:[UIImage imageNamed:imageName] options:SDWebImageRetryFailed|SDWebImageLowPriority progress:^(NSInteger receivedSize, NSInteger expectedSize) {
         progress(receivedSize * 1.0 / expectedSize);
     } completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
         if (error) {

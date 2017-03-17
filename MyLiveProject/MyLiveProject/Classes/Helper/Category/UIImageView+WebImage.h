@@ -17,26 +17,26 @@ typedef void(^DownloadImageProgressBlock)(CGFloat progress);
 /**
  *  异步加载图片
  *
- *  @param url       图片地址
+ *  @param path       图片地址
  *  @param imageName 占位图片名
  */
 
-- (void)downloadImage:(NSString *)url placeholder:(NSString *)imageName;
+- (void)br_setImageWithPath:(NSString *)path placeholder:(NSString *)imageName;
 
 /**
  *  异步加载图片，可以监听下载进度，成功或失败
  *
- *  @param url       图片地址
+ *  @param path      图片地址
  *  @param imageName 占位图片名
  *  @param success   下载成功
  *  @param failed    下载失败
  *  @param progress  下载进度
  */
 
-- (void)downloadImage:(NSString *)url
-          placeholder:(NSString *)imageName
-              success:(DownloadImageSuccessBlock)success
-               failed:(DownloadImageFailedBlock)failed
-             progress:(DownloadImageProgressBlock)progress;
+- (void)br_setImageWithPath:(NSString *)path
+                placeholder:(NSString *)imageName
+                    success:(DownloadImageSuccessBlock)success
+                     failed:(DownloadImageFailedBlock)failed
+                   progress:(DownloadImageProgressBlock)progress;
 
 @end
