@@ -9,6 +9,7 @@
 #import "NSString+Check.h"
 
 @implementation NSString (Check)
+
 #pragma 判断字符串是否为空字符
 + (BOOL)isBlankString:(NSString *)string {
     if (string == nil || string == NULL) {
