@@ -38,11 +38,11 @@
 #pragma mark - 第2步：加载数据
 - (void)loadData {
     [BRLiveHandler executeGetHotLiveTaskWithSuccess:^(id obj) {
-        MYLog(@"请求热门直播的信息：%@", obj);
+        NSLog(@"请求热门直播的信息：%@", obj);
         [self.liveModelArr addObjectsFromArray:obj];
         [self.tableView reloadData];
     } failed:^(id error) {
-        MYLog(@"请求错误：%@", error);
+        NSLog(@"请求错误：%@", error);
     }];
 }
 
@@ -88,6 +88,8 @@
     playVC.model = model;
 //    [self presentViewController:playVC animated:YES completion:nil];
     [self.navigationController pushViewController:playVC animated:YES];
+    
+    
 }
 
 - (NSMutableArray *)liveModelArr {

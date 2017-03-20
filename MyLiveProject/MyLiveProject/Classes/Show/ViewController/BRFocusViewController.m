@@ -31,9 +31,9 @@
 #pragma mark - 第2步：加载数据
 - (void)loadData {
     [BRLiveHandler executeGetHotLiveTaskWithSuccess:^(id obj) {
-        MYLog(@"请求关注、广告的信息：%@", obj);
+        NSLog(@"请求关注、广告的信息：%@", obj);
     } failed:^(id error) {
-        MYLog(@"请求错误：%@", error);
+        NSLog(@"请求错误：%@", error);
     }];
 }
 

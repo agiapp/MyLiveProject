@@ -18,10 +18,10 @@
         // 回传一个JSON意义不大，这里回传一个已经解析好的对象数组。
         // success(jsonObj);
         NSInteger status = [jsonObj[@"dm_error"] integerValue];
-        MYLog(@"error_msg = %@", jsonObj[@"error_msg"]);
+        NSLog(@"error_msg = %@", jsonObj[@"error_msg"]);
         if (status == 0) {
             // 如果操作成功，先做数据解析，再返回解析结果
-            MYLog(@"请求热门直播的信息：%@", jsonObj);
+            NSLog(@"请求热门直播的信息：%@", jsonObj);
             NSArray *liveModelArr = [BRLiveModel parse:jsonObj[@"lives"]];
             success(liveModelArr);
         } else {
@@ -37,7 +37,7 @@
     NSDictionary *params = @{@"uid":@"391980701", @"latitude":@"30.281094", @"longitude":@"120.140750"};
     [HttpTool getWithPath:API_NearLive params:params success:^(id jsonObj) {
         NSInteger status = [jsonObj[@"dm_error"] integerValue];
-        MYLog(@"error_msg = %@", jsonObj[@"error_msg"]);
+        NSLog(@"error_msg = %@", jsonObj[@"error_msg"]);
         if (status == 0) {
             success(jsonObj);
         } else {
@@ -53,7 +53,7 @@
     NSDictionary *params = @{@"uid":@"391980701", @"hfv":@"1.1", @"type":@"1"};
     [HttpTool getWithPath:API_Focus params:params success:^(id jsonObj) {
         NSInteger status = [jsonObj[@"dm_error"] integerValue];
-        MYLog(@"error_msg = %@", jsonObj[@"error_msg"]);
+        NSLog(@"error_msg = %@", jsonObj[@"error_msg"]);
         if (status == 0) {
             success(jsonObj);
         } else {

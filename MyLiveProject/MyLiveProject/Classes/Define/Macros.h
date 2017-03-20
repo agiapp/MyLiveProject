@@ -37,14 +37,21 @@ blue:((CGFloat)(rgbValue & 0xFF)) / 255.0 alpha:(a)]
 #define LIBRARY_PATH NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES).lastObject
 #define TEMP_PATH NSTemporaryDirectory()
 
+
+// 保证 #ifdef 中的宏定义只会在 OC 的代码中被引用。否则，一旦引入 C/C++ 的代码或者框架，就会出错！
+#ifdef __OBJC__
+
 // 日志输出宏定义
 #ifdef DEBUG
 // 调试状态
-#define MYLog(...) NSLog(__VA_ARGS__)
+#define NSLog(fmt, ...) NSLog((@"%s [Line %d] " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__)
 #else
 // 发布状态
-#define MYLog(...)
+#define NSLog(...)
 #endif
+
+#endif
+
 
 
 #endif /* Macros_h */
