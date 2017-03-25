@@ -11,11 +11,15 @@
 @implementation UIImage (Extension)
 
 - (UIImage *)imageWithCornerRadius:(CGFloat)radius {
-    CGRect rect = (CGRect){0.f, 0.f, self.size};
-    // 重新生成一张和目标尺寸相同的图片，参数(大小，不透明，屏幕的分辨率)
-    UIGraphicsBeginImageContextWithOptions(self.size, NO, UIScreen.mainScreen.scale);
+    // 1.利用绘图，建立上下文。重新生成一张和目标尺寸相同的图片，参数(大小，不透明YES，屏幕的分辨率)
+    UIGraphicsBeginImageContextWithOptions(self.size, YES, 0.0);
     
-    CGContextAddPath(UIGraphicsGetCurrentContext(), [UIBezierPath bezierPathWithRoundedRect:rect cornerRadius:radius].CGPath);
+    CGRect rect = (CGRect){0.f, 0.f, self.size};
+    // 利用 贝塞尔路径 裁切效果
+    UIBezierPath *path = [UIBezierPath bezierPathWithRoundedRect:rect cornerRadius:radius];
+    
+    
+    CGContextAddPath(UIGraphicsGetCurrentContext(), path.CGPath);
     CGContextClip(UIGraphicsGetCurrentContext());
     
     // 绘制图像
