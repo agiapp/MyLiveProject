@@ -29,11 +29,12 @@
 		C5491C151E7783B900A11807 /* 1.caf in Resources */ = {isa = PBXBuildFile; fileRef = C5491C121E7783B900A11807 /* 1.caf */; };
 		C5491C161E7783B900A11807 /* blank.wav in Resources */ = {isa = PBXBuildFile; fileRef = C5491C131E7783B900A11807 /* blank.wav */; };
 		C5491C171E7783B900A11807 /* pushmsg.caf in Resources */ = {isa = PBXBuildFile; fileRef = C5491C141E7783B900A11807 /* pushmsg.caf */; };
+		C5491C491E86479C00A11807 /* UIImageView+BRAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = C5491C481E86479C00A11807 /* UIImageView+BRAdd.m */; };
+		C5491C4C1E8649A200A11807 /* BRLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C5491C4B1E8649A200A11807 /* BRLocationManager.m */; };
 		C54A3EEF1E5C8CB2008FF367 /* BaseHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = C54A3EEE1E5C8CB2008FF367 /* BaseHandler.m */; };
 		C54A3EF41E5C92E6008FF367 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C54A3EF31E5C92E6008FF367 /* Assets.xcassets */; };
 		C54A3EF81E5C9BBC008FF367 /* BRLiveHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = C54A3EF71E5C9BBC008FF367 /* BRLiveHandler.m */; };
 		C54A3F001E5C9CC2008FF367 /* HttpTool.m in Sources */ = {isa = PBXBuildFile; fileRef = C54A3EFF1E5C9CC2008FF367 /* HttpTool.m */; };
-		C54A3F0A1E5CA314008FF367 /* UIImageView+WebImage.m in Sources */ = {isa = PBXBuildFile; fileRef = C54A3F081E5CA314008FF367 /* UIImageView+WebImage.m */; };
 		C58C6AD61E66CEFA00BF0E4D /* UIImage+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = C58C6AD51E66CEFA00BF0E4D /* UIImage+Extension.m */; };
 		C5E502881E61A6D3003F1943 /* BRLiveCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C5E502871E61A6D3003F1943 /* BRLiveCell.m */; };
 		C5E5028B1E61F765003F1943 /* NSString+Check.m in Sources */ = {isa = PBXBuildFile; fileRef = C5E5028A1E61F765003F1943 /* NSString+Check.m */; };
@@ -88,6 +89,11 @@
 		C5491C121E7783B900A11807 /* 1.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = 1.caf; sourceTree = "<group>"; };
 		C5491C131E7783B900A11807 /* blank.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = blank.wav; sourceTree = "<group>"; };
 		C5491C141E7783B900A11807 /* pushmsg.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = pushmsg.caf; sourceTree = "<group>"; };
+		C5491C471E86479B00A11807 /* UIImageView+BRAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+BRAdd.h"; sourceTree = "<group>"; };
+		C5491C481E86479C00A11807 /* UIImageView+BRAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+BRAdd.m"; sourceTree = "<group>"; };
+		C5491C4A1E8649A200A11807 /* BRLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRLocationManager.h; sourceTree = "<group>"; };
+		C5491C4B1E8649A200A11807 /* BRLocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRLocationManager.m; sourceTree = "<group>"; };
+		C5491C4D1E864A7F00A11807 /* Singleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Singleton.h; sourceTree = "<group>"; };
 		C54A3EED1E5C8CB2008FF367 /* BaseHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseHandler.h; sourceTree = "<group>"; };
 		C54A3EEE1E5C8CB2008FF367 /* BaseHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseHandler.m; sourceTree = "<group>"; };
 		C54A3EF31E5C92E6008FF367 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = MyLiveProject/Assets.xcassets; sourceTree = SOURCE_ROOT; };
@@ -97,8 +103,6 @@
 		C54A3EFF1E5C9CC2008FF367 /* HttpTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpTool.m; sourceTree = "<group>"; };
 		C54A3F031E5CA2D8008FF367 /* APIConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIConfig.h; sourceTree = "<group>"; };
 		C54A3F041E5CA2D8008FF367 /* Macros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Macros.h; sourceTree = "<group>"; };
-		C54A3F071E5CA314008FF367 /* UIImageView+WebImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+WebImage.h"; sourceTree = "<group>"; };
-		C54A3F081E5CA314008FF367 /* UIImageView+WebImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+WebImage.m"; sourceTree = "<group>"; };
 		C58C6AD41E66CEFA00BF0E4D /* UIImage+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Extension.h"; sourceTree = "<group>"; };
 		C58C6AD51E66CEFA00BF0E4D /* UIImage+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Extension.m"; sourceTree = "<group>"; };
 		C5E502861E61A6D3003F1943 /* BRLiveCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRLiveCell.h; sourceTree = "<group>"; };
@@ -237,6 +241,7 @@
 			children = (
 				C54A3F041E5CA2D8008FF367 /* Macros.h */,
 				C54A3F031E5CA2D8008FF367 /* APIConfig.h */,
+				C5491C4D1E864A7F00A11807 /* Singleton.h */,
 			);
 			path = Define;
 			sourceTree = "<group>";
@@ -253,8 +258,8 @@
 		C54A3F061E5CA314008FF367 /* Category */ = {
 			isa = PBXGroup;
 			children = (
-				C54A3F071E5CA314008FF367 /* UIImageView+WebImage.h */,
-				C54A3F081E5CA314008FF367 /* UIImageView+WebImage.m */,
+				C5491C471E86479B00A11807 /* UIImageView+BRAdd.h */,
+				C5491C481E86479C00A11807 /* UIImageView+BRAdd.m */,
 				C5270DFD1E5FD8E3009536BE /* NSObject+BRParse.h */,
 				C5270DFE1E5FD8E3009536BE /* NSObject+BRParse.m */,
 				C5E502891E61F765003F1943 /* NSString+Check.h */,
@@ -270,6 +275,8 @@
 			children = (
 				C517D29D1E612E5B00A87C10 /* MJExtensionConfig.h */,
 				C517D29E1E612E5B00A87C10 /* MJExtensionConfig.m */,
+				C5491C4A1E8649A200A11807 /* BRLocationManager.h */,
+				C5491C4B1E8649A200A11807 /* BRLocationManager.m */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -671,6 +678,7 @@
 				C54A3EEF1E5C8CB2008FF367 /* BaseHandler.m in Sources */,
 				C5E502941E62D8C6003F1943 /* BRHotViewController.m in Sources */,
 				C54394F81E753201005EF454 /* BRPlayerViewController.m in Sources */,
+				C5491C491E86479C00A11807 /* UIImageView+BRAdd.m in Sources */,
 				C517D29F1E612E5B00A87C10 /* MJExtensionConfig.m in Sources */,
 				C54A3F001E5C9CC2008FF367 /* HttpTool.m in Sources */,
 				C517D29C1E6096B800A87C10 /* BRCreatorModel.m in Sources */,
@@ -684,7 +692,6 @@
 				C5E502881E61A6D3003F1943 /* BRLiveCell.m in Sources */,
 				C517D2991E60965700A87C10 /* BRLiveModel.m in Sources */,
 				C58C6AD61E66CEFA00BF0E4D /* UIImage+Extension.m in Sources */,
-				C54A3F0A1E5CA314008FF367 /* UIImageView+WebImage.m in Sources */,
 				C54394FC1E75896A005EF454 /* BRChatViewController.m in Sources */,
 				C5E502971E62D95D003F1943 /* BRNearViewController.m in Sources */,
 				C5F295861E49BFED00090B2A /* BRTabBarController.m in Sources */,
@@ -693,6 +700,7 @@
 				C5F296501E4C368800090B2A /* BRSlideMenuView.m in Sources */,
 				C54A3EF81E5C9BBC008FF367 /* BRLiveHandler.m in Sources */,
 				C5E5028B1E61F765003F1943 /* NSString+Check.m in Sources */,
+				C5491C4C1E8649A200A11807 /* BRLocationManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -830,7 +838,6 @@
 					"-l\"AFNetworking\"",
 					"-l\"MJExtension\"",
 					"-l\"Masonry\"",
-					"-l\"SDWebImage\"",
 					"-l\"YYKit\"",
 					"-l\"sqlite3\"",
 					"-l\"z\"",
@@ -891,7 +898,6 @@
 					"-l\"AFNetworking\"",
 					"-l\"MJExtension\"",
 					"-l\"Masonry\"",
-					"-l\"SDWebImage\"",
 					"-l\"YYKit\"",
 					"-l\"sqlite3\"",
 					"-l\"z\"",
