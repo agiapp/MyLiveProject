@@ -38,4 +38,16 @@ typedef void(^DownloadImageProgressBlock)(CGFloat progress);
                     success:(DownloadImageSuccessBlock)success
                      failed:(DownloadImageFailedBlock)failed;
 
+/**
+ *  下载图片，不给imageView赋值
+ *
+ *  @param url      图片地址
+ *  @param success   下载成功
+ *  @param failed    下载失败
+ */
+
++ (void)br_downloadImageWithUrl:(NSString *)url
+                        success:(DownloadImageSuccessBlock)success
+                         failed:(DownloadImageFailedBlock)failed;
+
 @end
