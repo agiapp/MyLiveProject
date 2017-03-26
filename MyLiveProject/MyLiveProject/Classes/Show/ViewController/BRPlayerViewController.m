@@ -8,9 +8,9 @@
 
 #import "BRPlayerViewController.h"
 #import <IJKMediaFramework/IJKMediaFramework.h>
-#import "BRLiveModel.h"
 #import "BRChatViewController.h"
 #import "AppDelegate.h"
+#import "BRPlayerModel.h"
 
 @interface BRPlayerViewController ()
 @property (atomic, strong) id<IJKMediaPlayback> player;
@@ -40,7 +40,7 @@
         _blurImageView = [[UIImageView alloc]initWithFrame:self.view.bounds];
         [self.view addSubview:_blurImageView];
     }
-    [self.blurImageView br_setImageWithPath:self.model.creator.portrait placeholder:@"default_room"];
+    [self.blurImageView br_setImageWithPath:self.model.portrait placeholder:@"default_room"];
     // 创建毛玻璃效果
     UIBlurEffect *blur = [UIBlurEffect effectWithStyle:UIBlurEffectStyleLight];
     // 创建毛玻璃视图
@@ -244,9 +244,9 @@
     return _chatVC;
 }
 
-- (BRLiveModel *)model {
+- (BRPlayerModel *)model {
     if (!_model) {
-        _model = [[BRLiveModel alloc]init];
+        _model = [[BRPlayerModel alloc]init];
     }
     return _model;
 }

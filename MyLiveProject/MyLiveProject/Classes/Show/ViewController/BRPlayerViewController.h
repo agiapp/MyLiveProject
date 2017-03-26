@@ -8,9 +8,9 @@
 
 #import "BaseViewController.h"
 
-@class BRLiveModel;
+@class BRPlayerModel;
 @interface BRPlayerViewController : BaseViewController
 /** 直播信息模型 */
-@property (nonatomic, strong) BRLiveModel *model;
+@property (nonatomic, strong) BRPlayerModel *model;
 
 @end

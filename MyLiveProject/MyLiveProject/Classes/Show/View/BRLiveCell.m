@@ -7,7 +7,7 @@
 //
 
 #import "BRLiveCell.h"
-#import "BRLiveModel.h"
+#import "BRHotLiveModel.h"
 #import "NSString+Check.h"
 
 @interface BRLiveCell ()

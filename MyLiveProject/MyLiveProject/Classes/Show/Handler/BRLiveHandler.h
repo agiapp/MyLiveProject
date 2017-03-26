@@ -28,12 +28,12 @@
 + (void)executeGetNearLiveTaskWithSuccess:(SuccessBlock)success failed:(FailedBlock)failed;
 
 /**
- *  获取广告页
+ *  获取关注页信息
  *
  *  @param success  成功后的回调
  *  @param failed   失败后的回调
  */
-+ (void)executeGetAdvertiseTaskWithSuccess:(SuccessBlock)success failed:(FailedBlock)failed;
++ (void)executeGetFocusTaskWithSuccess:(SuccessBlock)success failed:(FailedBlock)failed;
 
 
 @end
