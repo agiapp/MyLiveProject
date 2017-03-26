@@ -9,13 +9,14 @@
 #import "BRHotViewController.h"
 #import "BRLiveHandler.h"
 #import "BRLiveCell.h"
-#import "BRLiveModel.h"
+#import "BRHotLiveModel.h"
 //#import <MediaPlayer/MediaPlayer.h> 系统提供的播放器
 #import "BRPlayerViewController.h"
+#import "BRPlayerModel.h"
 
 @interface BRHotViewController ()<UITableViewDataSource, UITableViewDelegate>
 @property (nonatomic, strong) UITableView *tableView;
-@property (nonatomic, strong) NSMutableArray *liveModelArr;
+@property (nonatomic, strong) NSMutableArray *hotLiveModelArr;
 
 @end
 
@@ -39,7 +40,7 @@
 - (void)loadData {
     [BRLiveHandler executeGetHotLiveTaskWithSuccess:^(id obj) {
         NSLog(@"请求热门直播的信息：%@", obj);
-        [self.liveModelArr addObjectsFromArray:obj];
+        [self.hotLiveModelArr addObjectsFromArray:obj];
         [self.tableView reloadData];
     } failed:^(id error) {
         NSLog(@"请求错误：%@", error);
@@ -63,7 +64,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.liveModelArr.count;
+    return self.hotLiveModelArr.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -72,31 +73,33 @@
     if (!cell) {
         cell = [[BRLiveCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:ID];
     }
-    cell.model = self.liveModelArr[indexPath.row];
+    cell.model = self.hotLiveModelArr[indexPath.row];
     return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    BRLiveModel *model = self.liveModelArr[indexPath.row];
+    BRLiveModel *model = self.hotLiveModelArr[indexPath.row];
 /**
     // 使用系统自带的播放器去播放直播视频，播放不了，因为解码不了，不支持播放rtmp。
     MPMoviePlayerViewController *movieVC = [[MPMoviePlayerViewController alloc]initWithContentURL:[NSURL URLWithString:model.streamAddr]];
     [self presentViewController:movieVC animated:YES completion:nil];
 */
     BRPlayerViewController *playVC = [[BRPlayerViewController alloc]init];
-    playVC.model = model;
+    BRPlayerModel *playerModel = [[BRPlayerModel alloc]init];
+    playerModel.portrait = model.creator.portrait;
+    playerModel.streamAddr = model.streamAddr;
+    playVC.model = playerModel;
 //    [self presentViewController:playVC animated:YES completion:nil];
     [self.navigationController pushViewController:playVC animated:YES];
     
-    
 }
 
-- (NSMutableArray *)liveModelArr {
-    if (!_liveModelArr) {
-        _liveModelArr = [NSMutableArray array];
+- (NSMutableArray *)hotLiveModelArr {
+    if (!_hotLiveModelArr) {
+        _hotLiveModelArr = [NSMutableArray array];
     }
-    return _liveModelArr;
+    return _hotLiveModelArr;
 }
 
 @end
