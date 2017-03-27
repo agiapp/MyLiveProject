@@ -11,6 +11,9 @@
 @interface BRLaunchViewController ()
 @property (nonatomic, strong) UIImageView *bgImageView;
 @property (nonatomic, strong) UIButton *closeLiveBtn;
+@property (nonatomic, strong) UIButton *locationBtn;
+@property (nonatomic, strong) UIButton *startLiveBtn;
+@property (nonatomic, strong) UITextField *titleTF;
 
 @end
 
@@ -25,6 +28,9 @@
 - (void)initUI {
     self.bgImageView.hidden = NO;
     self.closeLiveBtn.hidden = NO;
+    self.locationBtn.hidden = NO;
+    self.startLiveBtn.hidden = NO;
+    self.titleTF.hidden = NO;
 }
 
 - (UIImageView *)bgImageView {
@@ -55,6 +61,68 @@
 
 - (void)clickCloseLiveBtn {
     [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (UIButton *)locationBtn {
+    if (!_locationBtn) {
+        _locationBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+        _locationBtn.titleLabel.font = [UIFont systemFontOfSize:15.0f];
+        [_locationBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+        [_locationBtn setTitle:@"杭州市" forState:UIControlStateNormal];
+        [_locationBtn setImage:[UIImage imageNamed:@"launch_map_on"] forState:UIControlStateNormal];
+        [_locationBtn addTarget:self action:@selector(clickLocationBtn) forControlEvents:UIControlEventTouchUpInside];
+        [self.view addSubview:_locationBtn];
+        [_locationBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.top.mas_equalTo(20);
+            make.left.mas_equalTo(10);
+        }];
+    }
+    return _locationBtn;
+}
+
+- (void)clickLocationBtn {
+    NSLog(@"位置");
+}
+
+- (UIButton *)startLiveBtn {
+    if (!_startLiveBtn) {
+        _startLiveBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+        _startLiveBtn.titleLabel.font = [UIFont systemFontOfSize:16.0f];
+        [_startLiveBtn setTitleColor:RGB_HEX(0x7EDDC9, 1.0) forState:UIControlStateNormal];
+        [_startLiveBtn setBackgroundImage:[UIImage imageNamed:@"room_button"] forState:UIControlStateNormal];
+        [_startLiveBtn setTitle:@"开始直播" forState:UIControlStateNormal];
+        [_startLiveBtn addTarget:self action:@selector(clickStartLiveBtn) forControlEvents:UIControlEventTouchUpInside];
+        [self.view addSubview:_startLiveBtn];
+        [_startLiveBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.center.mas_equalTo(self.view);
+        }];
+    }
+    return _startLiveBtn;
+}
+
+- (void)clickStartLiveBtn {
+    NSLog(@"开始直播");
+}
+
+- (UITextField *)titleTF {
+    if (!_titleTF) {
+        _titleTF = [[UITextField alloc]init];
+        _titleTF.textAlignment = NSTextAlignmentCenter;
+        _titleTF.textColor = [UIColor whiteColor];
+        _titleTF.font = [UIFont systemFontOfSize:18.0f];
+        _titleTF.placeholder = @"给直播起个标题吧";
+        [self.view addSubview:_titleTF];
+        [_titleTF mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.bottom.mas_equalTo(self.startLiveBtn.mas_top).with.offset(-30);
+            make.centerX.mas_equalTo(self.startLiveBtn.mas_centerX);
+            make.size.mas_equalTo(CGSizeMake(250, 30));
+        }];
+    }
+    return _titleTF;
+}
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    [self.view endEditing:YES];
 }
 
 @end

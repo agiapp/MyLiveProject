@@ -8,6 +8,8 @@
 
 #import "AppDelegate.h"
 #import "BRTabBarController.h"
+#import "BRLocationManager.h"
+#import "BRADView.h"
 
 @interface AppDelegate ()
 
@@ -21,6 +23,14 @@
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
     BRTabBarController *tabBarVC = [[BRTabBarController alloc]init];
     self.window.rootViewController = tabBarVC;
+    [self.window makeKeyAndVisible];
+    // 广告视图
+    BRADView *adView = [[BRADView alloc]initWithFrame:SCREEN_BOUNDS];
+    [self.window addSubview:adView];
+    
+    [[BRLocationManager sharedBRLocationManager] getGPS:^(NSString *lat, NSString *lon) {
+        NSLog(@"当前位置的经纬度：(%@, %@)", lat, lon);
+    }];
     
     return YES;
 }
