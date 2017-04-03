@@ -13,6 +13,7 @@
 #import "BRLocationManager.h"
 
 @implementation BRLiveHandler
+
 #pragma mark - 获取热门直播信息
 + (void)executeGetHotLiveTaskWithSuccess:(SuccessBlock)success failed:(FailedBlock)failed {
     NSDictionary *params = @{@"uid":@"391980701"};
@@ -34,6 +35,24 @@
     }];
 }
 
+#pragma mark - 获取关注
++ (void)executeGetFocusTaskWithSuccess:(SuccessBlock)success failed:(FailedBlock)failed {
+    NSDictionary *params = @{@"uid":@"391980701", @"hfv":@"1.1", @"type":@"1"};
+    [HttpTool getWithPath:API_Focus params:params success:^(id jsonObj) {
+        NSInteger status = [jsonObj[@"dm_error"] integerValue];
+        NSLog(@"error_msg = %@", jsonObj[@"error_msg"]);
+        if (status == 0) {
+            //NSLog(@"关注：%@", jsonObj);
+            NSArray *focusModelArr = [BRLiveModel parse:jsonObj[@"lives"]];
+            success(focusModelArr);
+        } else {
+            failed(jsonObj);
+        }
+    } failure:^(NSError *error) {
+        failed(error);
+    }];
+}
+
 #pragma mark - 获取附近的直播信息
 + (void)executeGetNearLiveTaskWithSuccess:(SuccessBlock)success failed:(FailedBlock)failed {
     BRLocationManager *manager = [BRLocationManager sharedBRLocationManager];
@@ -46,22 +65,6 @@
             //NSLog(@"请求附近人的信息：%@", jsonObj);
             NSArray *nearLiveModelArr = [BRFlowModel parse:jsonObj[@"flow"]];
             success(nearLiveModelArr);
-        } else {
-            failed(jsonObj);
-        }
-    } failure:^(NSError *error) {
-        failed(error);
-    }];
-}
-
-#pragma mark - 获取关注
-+ (void)executeGetFocusTaskWithSuccess:(SuccessBlock)success failed:(FailedBlock)failed {
-    NSDictionary *params = @{@"uid":@"391980701", @"hfv":@"1.1", @"type":@"1"};
-    [HttpTool getWithPath:API_Focus params:params success:^(id jsonObj) {
-        NSInteger status = [jsonObj[@"dm_error"] integerValue];
-        NSLog(@"error_msg = %@", jsonObj[@"error_msg"]);
-        if (status == 0) {
-            success(jsonObj);
         } else {
             failed(jsonObj);
         }
