@@ -40,6 +40,17 @@
 		C54A3EF41E5C92E6008FF367 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C54A3EF31E5C92E6008FF367 /* Assets.xcassets */; };
 		C54A3EF81E5C9BBC008FF367 /* BRLiveHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = C54A3EF71E5C9BBC008FF367 /* BRLiveHandler.m */; };
 		C54A3F001E5C9CC2008FF367 /* HttpTool.m in Sources */ = {isa = PBXBuildFile; fileRef = C54A3EFF1E5C9CC2008FF367 /* HttpTool.m */; };
+		C5627CE91E90EDD9000A640E /* BRLivePreview.m in Sources */ = {isa = PBXBuildFile; fileRef = C5627CE81E90EDD9000A640E /* BRLivePreview.m */; };
+		C5627CF41E90F2C9000A640E /* camra_beauty@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C5627CEB1E90F2C9000A640E /* camra_beauty@2x.png */; };
+		C5627CF51E90F2C9000A640E /* camra_beauty@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C5627CEC1E90F2C9000A640E /* camra_beauty@3x.png */; };
+		C5627CF61E90F2C9000A640E /* camra_beauty_close@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C5627CED1E90F2C9000A640E /* camra_beauty_close@2x.png */; };
+		C5627CF71E90F2C9000A640E /* camra_beauty_close@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C5627CEE1E90F2C9000A640E /* camra_beauty_close@3x.png */; };
+		C5627CF81E90F2C9000A640E /* camra_preview@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C5627CEF1E90F2C9000A640E /* camra_preview@2x.png */; };
+		C5627CF91E90F2C9000A640E /* camra_preview@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C5627CF01E90F2C9000A640E /* camra_preview@3x.png */; };
+		C5627CFA1E90F2C9000A640E /* close_preview@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C5627CF11E90F2C9000A640E /* close_preview@2x.png */; };
+		C5627CFB1E90F2C9000A640E /* close_preview@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C5627CF21E90F2C9000A640E /* close_preview@3x.png */; };
+		C5627CFC1E90F2C9000A640E /* ios-29x29.png in Resources */ = {isa = PBXBuildFile; fileRef = C5627CF31E90F2C9000A640E /* ios-29x29.png */; };
+		C5627D051E91507D000A640E /* AppDelegate+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = C5627D041E91507D000A640E /* AppDelegate+Category.m */; };
 		C58C6AD61E66CEFA00BF0E4D /* UIImage+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = C58C6AD51E66CEFA00BF0E4D /* UIImage+Extension.m */; };
 		C5E502881E61A6D3003F1943 /* BRLiveCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C5E502871E61A6D3003F1943 /* BRLiveCell.m */; };
 		C5E5028B1E61F765003F1943 /* NSString+Check.m in Sources */ = {isa = PBXBuildFile; fileRef = C5E5028A1E61F765003F1943 /* NSString+Check.m */; };
@@ -117,6 +128,19 @@
 		C54A3EFF1E5C9CC2008FF367 /* HttpTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpTool.m; sourceTree = "<group>"; };
 		C54A3F031E5CA2D8008FF367 /* APIConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIConfig.h; sourceTree = "<group>"; };
 		C54A3F041E5CA2D8008FF367 /* Macros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Macros.h; sourceTree = "<group>"; };
+		C5627CE71E90EDD9000A640E /* BRLivePreview.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRLivePreview.h; sourceTree = "<group>"; };
+		C5627CE81E90EDD9000A640E /* BRLivePreview.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRLivePreview.m; sourceTree = "<group>"; };
+		C5627CEB1E90F2C9000A640E /* camra_beauty@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "camra_beauty@2x.png"; sourceTree = "<group>"; };
+		C5627CEC1E90F2C9000A640E /* camra_beauty@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "camra_beauty@3x.png"; sourceTree = "<group>"; };
+		C5627CED1E90F2C9000A640E /* camra_beauty_close@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "camra_beauty_close@2x.png"; sourceTree = "<group>"; };
+		C5627CEE1E90F2C9000A640E /* camra_beauty_close@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "camra_beauty_close@3x.png"; sourceTree = "<group>"; };
+		C5627CEF1E90F2C9000A640E /* camra_preview@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "camra_preview@2x.png"; sourceTree = "<group>"; };
+		C5627CF01E90F2C9000A640E /* camra_preview@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "camra_preview@3x.png"; sourceTree = "<group>"; };
+		C5627CF11E90F2C9000A640E /* close_preview@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "close_preview@2x.png"; sourceTree = "<group>"; };
+		C5627CF21E90F2C9000A640E /* close_preview@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "close_preview@3x.png"; sourceTree = "<group>"; };
+		C5627CF31E90F2C9000A640E /* ios-29x29.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ios-29x29.png"; sourceTree = "<group>"; };
+		C5627D031E91507D000A640E /* AppDelegate+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+Category.h"; sourceTree = "<group>"; };
+		C5627D041E91507D000A640E /* AppDelegate+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+Category.m"; sourceTree = "<group>"; };
 		C58C6AD41E66CEFA00BF0E4D /* UIImage+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Extension.h"; sourceTree = "<group>"; };
 		C58C6AD51E66CEFA00BF0E4D /* UIImage+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Extension.m"; sourceTree = "<group>"; };
 		C5E502861E61A6D3003F1943 /* BRLiveCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRLiveCell.h; sourceTree = "<group>"; };
@@ -276,6 +300,8 @@
 		C54A3F061E5CA314008FF367 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				C5627D031E91507D000A640E /* AppDelegate+Category.h */,
+				C5627D041E91507D000A640E /* AppDelegate+Category.m */,
 				C5491C471E86479B00A11807 /* UIImageView+BRAdd.h */,
 				C5491C481E86479C00A11807 /* UIImageView+BRAdd.m */,
 				C5270DFD1E5FD8E3009536BE /* NSObject+BRParse.h */,
@@ -299,6 +325,22 @@
 				C5491C711E87809F00A11807 /* BRCacheTool.m */,
 			);
 			path = Tools;
+			sourceTree = "<group>";
+		};
+		C5627CEA1E90F2C9000A640E /* images */ = {
+			isa = PBXGroup;
+			children = (
+				C5627CEB1E90F2C9000A640E /* camra_beauty@2x.png */,
+				C5627CEC1E90F2C9000A640E /* camra_beauty@3x.png */,
+				C5627CED1E90F2C9000A640E /* camra_beauty_close@2x.png */,
+				C5627CEE1E90F2C9000A640E /* camra_beauty_close@3x.png */,
+				C5627CEF1E90F2C9000A640E /* camra_preview@2x.png */,
+				C5627CF01E90F2C9000A640E /* camra_preview@3x.png */,
+				C5627CF11E90F2C9000A640E /* close_preview@2x.png */,
+				C5627CF21E90F2C9000A640E /* close_preview@3x.png */,
+				C5627CF31E90F2C9000A640E /* ios-29x29.png */,
+			);
+			path = images;
 			sourceTree = "<group>";
 		};
 		C5F294B61E48B45900090B2A = {
@@ -444,6 +486,8 @@
 		C5F294EC1E48BEEF00090B2A /* View */ = {
 			isa = PBXGroup;
 			children = (
+				C5627CE71E90EDD9000A640E /* BRLivePreview.h */,
+				C5627CE81E90EDD9000A640E /* BRLivePreview.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -564,6 +608,7 @@
 		C5F2957C1E49608800090B2A /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				C5627CEA1E90F2C9000A640E /* images */,
 				C5491C111E7783B900A11807 /* Ring */,
 				C5F294CE1E48B45900090B2A /* Assets.xcassets */,
 			);
@@ -633,12 +678,21 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C5627CF61E90F2C9000A640E /* camra_beauty_close@2x.png in Resources */,
 				C5491C171E7783B900A11807 /* pushmsg.caf in Resources */,
+				C5627CF71E90F2C9000A640E /* camra_beauty_close@3x.png in Resources */,
 				C5F294D21E48B45900090B2A /* LaunchScreen.storyboard in Resources */,
 				C54A3EF41E5C92E6008FF367 /* Assets.xcassets in Resources */,
+				C5627CF91E90F2C9000A640E /* camra_preview@3x.png in Resources */,
+				C5627CFC1E90F2C9000A640E /* ios-29x29.png in Resources */,
+				C5627CFB1E90F2C9000A640E /* close_preview@3x.png in Resources */,
 				C5491C151E7783B900A11807 /* 1.caf in Resources */,
 				C5F294CF1E48B45900090B2A /* Assets.xcassets in Resources */,
+				C5627CFA1E90F2C9000A640E /* close_preview@2x.png in Resources */,
+				C5627CF51E90F2C9000A640E /* camra_beauty@3x.png in Resources */,
+				C5627CF41E90F2C9000A640E /* camra_beauty@2x.png in Resources */,
 				C5F294CD1E48B45900090B2A /* Main.storyboard in Resources */,
+				C5627CF81E90F2C9000A640E /* camra_preview@2x.png in Resources */,
 				C5491C161E7783B900A11807 /* blank.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -714,6 +768,7 @@
 				C5F294C41E48B45900090B2A /* main.m in Sources */,
 				C5270DFF1E5FD8E3009536BE /* NSObject+BRParse.m in Sources */,
 				C5E504AE1E6507D9003F1943 /* BRLaunchViewController.m in Sources */,
+				C5627CE91E90EDD9000A640E /* BRLivePreview.m in Sources */,
 				C5F295C11E4A0E0900090B2A /* BRNavigationController.m in Sources */,
 				C5E5029A1E62D9C1003F1943 /* BRMeViewController.m in Sources */,
 				C5E502881E61A6D3003F1943 /* BRLiveCell.m in Sources */,
@@ -727,6 +782,7 @@
 				C5491C721E87809F00A11807 /* BRCacheTool.m in Sources */,
 				C5F296501E4C368800090B2A /* BRSlideMenuView.m in Sources */,
 				C54A3EF81E5C9BBC008FF367 /* BRLiveHandler.m in Sources */,
+				C5627D051E91507D000A640E /* AppDelegate+Category.m in Sources */,
 				C5E5028B1E61F765003F1943 /* NSString+Check.m in Sources */,
 				C5491C4C1E8649A200A11807 /* BRLocationManager.m in Sources */,
 			);
@@ -899,8 +955,9 @@
 					"\"WebP\"",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.renb.MyLiveProject;
+				PRODUCT_BUNDLE_IDENTIFIER = com.renbo.MyLiveProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -959,8 +1016,9 @@
 					"\"WebP\"",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.renb.MyLiveProject;
+				PRODUCT_BUNDLE_IDENTIFIER = com.renbo.MyLiveProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

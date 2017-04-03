@@ -7,6 +7,7 @@
 //
 
 #import "BRLaunchViewController.h"
+#import "BRLivePreview.h"
 
 @interface BRLaunchViewController ()
 @property (nonatomic, strong) UIImageView *bgImageView;
@@ -22,7 +23,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self initUI];
-    
 }
 
 - (void)initUI {
@@ -102,6 +102,10 @@
 
 - (void)clickStartLiveBtn {
     NSLog(@"开始直播");
+    BRLivePreview *livePreview = [[BRLivePreview alloc]initWithFrame:SCREEN_BOUNDS];
+    [self.view addSubview:livePreview];
+    // 开启直播
+    [livePreview startLive];
 }
 
 - (UITextField *)titleTF {
