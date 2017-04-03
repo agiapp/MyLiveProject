@@ -30,8 +30,8 @@
 //附近
 #define API_NearLive @"api/live/near_flow_old" //?&uid=391980701&latitude=30.281094&longitude=120.140750
 
-//欢哥直播地址
-#define Live_Dahuan @"rtmp://live.hkstv.hk.lxdns.com:1935/live/dahuan"
+//我的直播地址
+#define Live_boge @"rtmp://live.hkstv.hk.lxdns.com:1935/live/boge"
 
 
 #endif /* APIConfig_h */

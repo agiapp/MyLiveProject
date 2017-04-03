@@ -44,14 +44,14 @@ blue:((CGFloat)(rgbValue & 0xFF)) / 255.0 alpha:(a)]
 // 日志输出宏定义
 #ifdef DEBUG
 // 调试状态
-#define NSLog(fmt, ...) NSLog((@"%s [Line %d] " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__)
+//#define NSLog(fmt, ...) NSLog((@"%s [Line %d] " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__)
+#define NSLog(FORMAT, ...) fprintf(stderr, "【%s:%zd】%s\n", [[[NSString stringWithUTF8String: __FILE__] lastPathComponent] UTF8String], __LINE__, [[NSString stringWithFormat: FORMAT, ## __VA_ARGS__] UTF8String]);
 #else
 // 发布状态
 #define NSLog(...)
 #endif
 
 #endif
-
 
 
 #endif /* Macros_h */
