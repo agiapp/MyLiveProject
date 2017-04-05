@@ -12,4 +12,7 @@
 /** 获取当前屏幕显示的控制器 */
 - (UIViewController *)getCurrentVisibleViewController;
 
+/** 设置UMeung */
+- (void)setupUMeung;
+
 @end
