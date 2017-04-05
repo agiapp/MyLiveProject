@@ -7,7 +7,7 @@
 //
 
 #import "BRADView.h"
-#import "BRCacheTool.h"
+#import "BRCacheHelper.h"
 
 @interface BRADView ()
 @property (nonatomic, strong) UIImageView *adImageView;
@@ -34,7 +34,7 @@
     NSString *path = @"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1490517014356&di=49672965782b97d6538f32271b4cecb5&imgtype=0&src=http%3A%2F%2Fa.hiphotos.baidu.com%2Fimage%2Fpic%2Fitem%2Fb7003af33a87e950ade0026c12385343fbf2b43f.jpg";
     [UIImageView br_downloadImageWithUrl:path success:^(UIImage *image) {
         NSLog(@"下载图片成功！");
-        [BRCacheTool setAdImagePath:path];
+        [BRCacheHelper setAdImagePath:path];
     } failed:^(NSError *error) {
         NSLog(@"下载图片失败：%@", error);
     }];
@@ -48,7 +48,7 @@
     UITapGestureRecognizer *myTap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(didTapTimeLabel)];
     [self.timeLabel addGestureRecognizer:myTap];
     
-    NSString *imagePath = [BRCacheTool adImagePath];
+    NSString *imagePath = [BRCacheHelper adImagePath];
     UIImage *lastCacheImage = [[YYWebImageManager sharedManager].cache getImageForKey:imagePath withType:YYImageCacheTypeDisk];
     if (lastCacheImage) {
         self.adImageView.image = lastCacheImage;
