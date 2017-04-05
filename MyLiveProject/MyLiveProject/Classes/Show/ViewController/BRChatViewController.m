@@ -21,8 +21,6 @@
 @property (nonatomic, strong) UIImageView *giftImageView;
 @property (nonatomic, strong) UIImageView *shareImageView;
 
-@property (nonatomic, strong) dispatch_source_t timer;
-
 @end
 
 @implementation BRChatViewController
@@ -31,77 +29,98 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor clearColor];
     [self initUI];
-    //[self initTimer];
 }
 
 - (void)initUI {
     //self.bgView.hidden = NO;
-    // 添加底部视图
-    self.chatImageView.hidden = NO;
-    self.messageImageView.hidden = NO;
-    self.giftImageView.hidden = NO;
-    self.shareImageView.hidden = NO;
-    
     // 添加顶部视图
     self.topBgImageView.hidden = NO;
     self.headImageView.hidden = NO;
     self.onlineUsersLabel.hidden = NO;
     self.moneyBtn.hidden = NO;
+
+    // 添加底部视图
+    self.chatImageView.hidden = NO;
+    self.shareImageView.hidden = NO;
+    self.giftImageView.hidden = NO;
+    self.messageImageView.hidden = NO;
     
+    [self initTimer];
 }
 
-//- (void)initTimer {
-//    //初始化心形动画
-//    self.timer = dispatch_source_create(DISPATCH_SOURCE_TYPE_TIMER, 0, 0, dispatch_get_main_queue());
-//    dispatch_source_set_timer(self.timer, DISPATCH_TIME_NOW, 1 * NSEC_PER_SEC, 0);
-//    dispatch_source_set_event_handler(self.timer, ^{
-//        [self showMoreLoveAnimateFromView:self.shareImageView addToView:self.view];
-//    });
-//    dispatch_resume(self.timer);
-//    
-//}
-//
-//- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-//    [self showMoreLoveAnimateFromView:self.shareImageView addToView:self.view];
-//}
-//
-//- (void)showMoreLoveAnimateFromView:(UIView *)fromView addToView:(UIView *)addToView {
-//    UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 30, 25)];
-//    CGRect loveFrame = [fromView convertRect:fromView.frame toView:addToView];
-//    CGPoint position = CGPointMake(fromView.layer.position.x, loveFrame.origin.y - 30);
-//    imageView.layer.position = position;
-//    NSArray *imgArr = @[@"heart_1",@"heart_2",@"heart_3",@"heart_4",@"heart_5",@"heart_1"];
-//    NSInteger img = arc4random()%6;
-//    imageView.image = [UIImage imageNamed:imgArr[img]];
-//    [addToView addSubview:imageView];
-//    
-//    imageView.transform = CGAffineTransformMakeScale(0.01, 0.01);
-//    [UIView animateWithDuration:0.3 delay:0 usingSpringWithDamping:0.5 initialSpringVelocity:0.5 options:UIViewAnimationOptionCurveEaseOut animations:^{
-//        imageView.transform = CGAffineTransformIdentity;
-//    } completion:nil];
-//    
-//    CGFloat duration = 3 + arc4random()%5;
-//    CAKeyframeAnimation *positionAnimate = [CAKeyframeAnimation animationWithKeyPath:@"position"];
-//    positionAnimate.repeatCount = 1;
-//    positionAnimate.duration = duration;
-//    positionAnimate.fillMode = kCAFillModeForwards;
-//    positionAnimate.removedOnCompletion = NO;
-//    
-//    UIBezierPath *sPath = [UIBezierPath bezierPath];
-//    [sPath moveToPoint:position];
-//    CGFloat sign = arc4random()%2 == 1 ? 1 : -1;
-//    CGFloat controlPointValue = (arc4random()%50 + arc4random()%100) * sign;
-//    [sPath addCurveToPoint:CGPointMake(position.x, position.y - 300) controlPoint1:CGPointMake(position.x - controlPointValue, position.y - 150) controlPoint2:CGPointMake(position.x + controlPointValue, position.y - 150)];
-//    positionAnimate.path = sPath.CGPath;
-//    [imageView.layer addAnimation:positionAnimate forKey:@"heartAnimated"];
-//    
-//    
-//    [UIView animateWithDuration:duration animations:^{
-//        imageView.layer.opacity = 0;
-//    } completion:^(BOOL finished) {
-//        [imageView removeFromSuperview];
-//    }];
-//}
+- (void)initTimer {
+    [NSTimer scheduledTimerWithTimeInterval:0.5 repeats:YES block:^(NSTimer * _Nonnull timer) {
+        [self showMoreLoveAnimation];
+    }];
+}
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    // 点赞动画
+    [self showMoreLoveAnimation];
+}
+
+#pragma mark - 点赞动画
+- (void)showMoreLoveAnimation {
+    UIImageView *imageView = [[UIImageView alloc] init];
+    CGRect frame = self.view.frame;
+    //  初始frame，即设置了动画的起点
+    imageView.frame = CGRectMake(self.shareImageView.centerX - 12, self.shareImageView.centerY - self.shareImageView.height / 2 - 22, 25, 22);
+    //  初始化imageView透明度为0
+    imageView.alpha = 0;
+    imageView.backgroundColor = [UIColor clearColor];
+    imageView.clipsToBounds = YES;
+    //  用0.1秒的时间将imageView的透明度变成0.8，同时将其放大1.2倍，再缩放至1.0倍，这里参数根据需求设置
+    [UIView animateWithDuration:0.2 animations:^{
+        imageView.alpha = 0.8;
+        imageView.frame = CGRectMake(self.shareImageView.centerX - 12, self.shareImageView.centerY - self.shareImageView.height / 2 - 50, 25, 22);
+        CGAffineTransform transfrom = CGAffineTransformMakeScale(1.2, 1.2);
+        imageView.transform = CGAffineTransformScale(transfrom, 1, 1);
+    }];
+    [self.view addSubview:imageView];
+    //  随机产生一个动画结束点的X值
+    CGFloat finishX = frame.size.width - round(random() % 200);
+    //  动画结束点的Y值
+    CGFloat finishY = SCREEN_HEIGHT / 2;
+    //  imageView在运动过程中的缩放比例
+    CGFloat scale = round(random() % 2) + 0.7;
+    // 生成一个作为速度参数的随机数
+    CGFloat speed = 1 / round(random() % 900) + 0.6;
+    //  动画执行时间
+    NSTimeInterval duration = 4 * speed;
+    //  如果得到的时间是无穷大，就重新附一个值（这里要特别注意，请看下面的特别提醒）
+    if (duration == INFINITY) duration = 2.0;
+    // 随机生成一个0~7的数，以便下面拼接图片名
+    int imageName = round(random() % 6);
+    
+    //  开始动画
+    [UIView beginAnimations:nil context:(__bridge void *_Nullable)(imageView)];
+    //  设置动画时间
+    [UIView setAnimationDuration:duration];
+    
+    //  拼接图片名字
+    imageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"heart_%d.png",imageName]];
+    
+    //  设置imageView的结束frame
+    imageView.frame = CGRectMake( finishX, finishY, 30 * scale, 30 * scale);
+    
+    //  设置渐渐消失的效果，这里的时间最好和动画时间一致
+    [UIView animateWithDuration:duration animations:^{
+        imageView.alpha = 0;
+    }];
+    
+    //  结束动画，调用onAnimationComplete:finished:context:函数
+    [UIView setAnimationDidStopSelector:@selector(onAnimationComplete:finished:context:)];
+    //  设置动画代理
+    [UIView setAnimationDelegate:self];
+    [UIView commitAnimations];
+}
+
+/// 动画完后销毁iamgeView
+- (void)onAnimationComplete:(NSString *)animationID finished:(NSNumber *)finished context:(void *)context{
+    UIImageView *imageView = (__bridge UIImageView *)(context);
+    [imageView removeFromSuperview];
+    imageView = nil;
+}
 
 - (void)setModel:(BRPlayerModel *)model {
     _model = model;
@@ -112,18 +131,18 @@
     } repeats:YES];
 }
 
-//- (UIView *)bgView {
-//    if (!_bgView) {
-//        _bgView = [[UIView alloc]init];
-//        _bgView.backgroundColor = RGB_HEX(0x349DDA, 1.0);
-//        [self.view addSubview:_bgView];
-//        [_bgView mas_makeConstraints:^(MASConstraintMaker *make) {
-//            make.bottom.mas_equalTo(0);
-//            make.size.mas_equalTo(CGSizeMake(SCREEN_WIDTH, 60));
-//        }];
-//    }
-//    return _bgView;
-//}
+- (UIView *)bgView {
+    if (!_bgView) {
+        _bgView = [[UIView alloc]init];
+        _bgView.backgroundColor = RGB_HEX(0x349DDA, 1.0);
+        [self.view addSubview:_bgView];
+        [_bgView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.bottom.mas_equalTo(0);
+            make.size.mas_equalTo(CGSizeMake(SCREEN_WIDTH, 60));
+        }];
+    }
+    return _bgView;
+}
 
 - (UIImageView *)topBgImageView {
     if (!_topBgImageView) {
