@@ -59,4 +59,8 @@ fastlane/screenshots
 
 iOSInjectionProject/
 
+# 自定义忽略目录
 IJKMediaFramework.framework
+UMSocial_Sdk_5.2.1
+UMSocial_Sdk_Extra_Frameworks
+
