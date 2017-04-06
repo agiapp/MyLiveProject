@@ -12,6 +12,13 @@
 // 请求服务器的基本路径
 static NSString *kBaseURL = SERVER_HOST;
 
+@interface HttpTool ()
+@property (nonatomic, assign) BOOL isConnect;
++ (instancetype)sharedAFHTTPManager;
+
+@end
+
+
 @interface AFHTTPManager : AFHTTPSessionManager
 @property (nonatomic, assign) BOOL isConnect;
 + (instancetype)sharedAFHTTPManager;
@@ -32,10 +39,11 @@ static NSString *kBaseURL = SERVER_HOST;
         manager.requestSerializer = [AFHTTPRequestSerializer serializer];
         // 设置服务器返回结果的类型
         manager.responseSerializer = [AFJSONResponseSerializer serializer];
-        // 2.设置请求超时时间(请求不能无休止的发,请求超时后就会关掉)
-        manager.requestSerializer.timeoutInterval = 30;
         // 接收参数类型
         manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json",@"text/html", @"text/json", @"text/javascript", @"text/plain", @"text/xml", @"image/*", @"application/octet-stream", @"application/zip", nil];
+        // 2.设置请求超时时间(请求不能无休止的发,请求超时后就会关掉)
+        manager.requestSerializer.timeoutInterval = 30;
+        
         // 安全策略(HTTPS，多加了一个SSL证书，默认情况下没有证书)
         /**
          *  SSLPinningMode 三种类：
@@ -44,6 +52,8 @@ static NSString *kBaseURL = SERVER_HOST;
          *  AFSSLPinningModeCertificate  既验证公钥，又验证证书
          */
         manager.securityPolicy = [AFSecurityPolicy defaultPolicy]; //默认情况
+        //使用AFNetworking 进行 https请求核心是生成 AFSecurityPolicy 对象，并赋值给当前的SessionManager。
+        manager.securityPolicy = [self customSecurityPolicy];
         
         //开启监听
         //[self openNetMonitoring];
@@ -52,6 +62,31 @@ static NSString *kBaseURL = SERVER_HOST;
     return manager;
 }
 
++ (AFSecurityPolicy*)customSecurityPolicy {
+    // 证书的路径（将服务端的.crt格式证书(SSL 证书)转成mac端使用的.cer格式证书）
+    // 格式转换命令：openssl x509 -in 你的证书.crt -out 你的证书.cer -outform der
+    NSString *cerPath = [[NSBundle mainBundle] pathForResource:@"server_staging" ofType:@"cer"];
+    NSData *certData = [NSData dataWithContentsOfFile:cerPath];
+    
+    // AFSSLPinningModeCertificate 使用证书验证模式
+    AFSecurityPolicy *securityPolicy = [AFSecurityPolicy policyWithPinningMode:AFSSLPinningModeCertificate];
+    
+    // allowInvalidCertificates 是否允许无效证书（也就是自建的证书），默认为NO
+    // 如果是需要验证自建证书，需要设置为YES
+    securityPolicy.allowInvalidCertificates = YES;
+    
+    //validatesDomainName 是否需要验证域名，默认为YES；
+    //假如证书的域名与你请求的域名不一致，需把该项设置为NO；如设成NO的话，即服务器使用其他可信任机构颁发的证书，也可以建立连接，这个非常危险，建议打开。
+    //置为NO，主要用于这种情况：客户端请求的是子域名，而证书上的是另外一个域名。因为SSL证书上的域名是独立的，假如证书上注册的域名是www.google.com，那么mail.google.com是无法验证通过的；当然，有钱可以注册通配符的域名*.google.com，但这个还是比较贵的。
+    //如置为NO，建议自己添加对应域名的校验逻辑。
+    securityPolicy.validatesDomainName = NO;
+    
+    if (!certData) {
+        return securityPolicy;
+    }
+    securityPolicy.pinnedCertificates = [NSSet setWithArray:@[certData]];
+    return securityPolicy;
+}
 
 //判断是否有网络连接，有网络连接再进行下一操作。
 - (void)openNetMonitoring {
