@@ -84,7 +84,7 @@ static NSString *kBaseURL = SERVER_HOST;
     if (!certData) {
         return securityPolicy;
     }
-    securityPolicy.pinnedCertificates = [NSSet setWithArray:@[certData]];
+    securityPolicy.pinnedCertificates = @[certData];
     return securityPolicy;
 }
 

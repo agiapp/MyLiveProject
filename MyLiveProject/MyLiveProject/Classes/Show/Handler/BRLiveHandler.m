@@ -24,7 +24,7 @@
         NSLog(@"error_msg = %@", jsonObj[@"error_msg"]);
         if (status == 0) {
             // 如果操作成功，先做数据解析，再返回解析结果
-            //NSLog(@"请求热门直播的信息：%@", jsonObj);
+            NSLog(@"请求热门直播的信息：%@", jsonObj);
             NSArray *hotLiveModelArr = [BRLiveModel parse:jsonObj[@"lives"]];
             success(hotLiveModelArr);
         } else {
