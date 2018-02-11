@@ -7,7 +7,7 @@
 //
 
 #import "BRLoginViewController.h"
-#import "UMSocial.h"
+//#import "UMSocial.h"
 
 @interface BRLoginViewController ()
 @property (nonatomic, strong) UIImageView *bgImageView;
@@ -159,27 +159,27 @@
 - (void)clickBtn:(UIButton *)button {
     NSInteger index = button.tag - 1000;
     NSLog(@"点击了%ld", index);
-    if (index == 0) {
-        UMSocialSnsPlatform *snsPlatform = [UMSocialSnsPlatformManager getSocialPlatformWithName:UMShareToSina];
-        snsPlatform.loginClickHandler(self,[UMSocialControllerService defaultControllerService],YES,^(UMSocialResponseEntity *response){
-            // 获取微博用户名、uid、token等
-            if (response.responseCode == UMSResponseCodeSuccess) {
-                UMSocialAccountEntity *snsAccount = [[UMSocialAccountManager socialAccountDictionary] valueForKey:snsPlatform.platformName];
-                            NSLog(@"\nusername = %@,\n usid = %@,\n token = %@ iconUrl = %@,\n unionId = %@,\n thirdPlatformUserProfile = %@,\n thirdPlatformResponse = %@ \n, message = %@",snsAccount.userName,snsAccount.usid,snsAccount.accessToken,snsAccount.iconURL, snsAccount.unionId, response.thirdPlatformUserProfile, response.thirdPlatformResponse, response.message);
-                
-//                [BRCacheHelper sharedUser].nickName = snsAccount.userName;
-//                [BRCacheHelper sharedUser].iconUrl = snsAccount.iconURL;
-//                [BRCacheHelper saveUser];
-//                
-//                self.view.window.rootViewController = [[SXTTabBarViewController alloc] init];
-                
-            } else {
-                
-                NSLog(@"登录失败");
-            }
-            
-        });
-    }
+//    if (index == 0) {
+//        UMSocialSnsPlatform *snsPlatform = [UMSocialSnsPlatformManager getSocialPlatformWithName:UMShareToSina];
+//        snsPlatform.loginClickHandler(self,[UMSocialControllerService defaultControllerService],YES,^(UMSocialResponseEntity *response){
+//            // 获取微博用户名、uid、token等
+//            if (response.responseCode == UMSResponseCodeSuccess) {
+//                UMSocialAccountEntity *snsAccount = [[UMSocialAccountManager socialAccountDictionary] valueForKey:snsPlatform.platformName];
+//                            NSLog(@"\nusername = %@,\n usid = %@,\n token = %@ iconUrl = %@,\n unionId = %@,\n thirdPlatformUserProfile = %@,\n thirdPlatformResponse = %@ \n, message = %@",snsAccount.userName,snsAccount.usid,snsAccount.accessToken,snsAccount.iconURL, snsAccount.unionId, response.thirdPlatformUserProfile, response.thirdPlatformResponse, response.message);
+//
+////                [BRCacheHelper sharedUser].nickName = snsAccount.userName;
+////                [BRCacheHelper sharedUser].iconUrl = snsAccount.iconURL;
+////                [BRCacheHelper saveUser];
+////
+////                self.view.window.rootViewController = [[SXTTabBarViewController alloc] init];
+//
+//            } else {
+//
+//                NSLog(@"登录失败");
+//            }
+//
+//        });
+//    }
 }
 
 - (NSArray *)imageNameArr {

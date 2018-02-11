@@ -11,7 +11,7 @@
 #import "BRLocationManager.h"
 #import "BRADView.h"
 #import "AppDelegate+Category.h"
-#import "UMSocial.h"
+//#import "UMSocial.h"
 #import "BRLoginViewController.h"
 
 @interface AppDelegate ()
@@ -37,18 +37,18 @@
     }];
     
     // 初始化友盟控件
-    [self setupUMeung];
+//    [self setupUMeung];
     
     return YES;
 }
 
-- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
-    BOOL result = [UMSocialSnsService handleOpenURL:url];
-    if (result == FALSE) {
-        //调用其他SDK，例如支付宝SDK等
-    }
-    return result;
-}
+//- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
+//    BOOL result = [UMSocialSnsService handleOpenURL:url];
+//    if (result == FALSE) {
+//        //调用其他SDK，例如支付宝SDK等
+//    }
+//    return result;
+//}
 
 
 @end
