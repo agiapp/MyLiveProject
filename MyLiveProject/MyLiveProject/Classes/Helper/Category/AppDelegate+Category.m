@@ -9,8 +9,8 @@
 #import "AppDelegate+Category.h"
 #import "BRNavigationController.h"
 #import "BRTabBarController.h"
-#import "UMSocial.h"
-#import "UMSocialSinaSSOHandler.h"
+//#import "UMSocial.h"
+//#import "UMSocialSinaSSOHandler.h"
 
 @implementation AppDelegate (Category)
 #pragma mark - 获取当前屏幕显示的控制器
@@ -32,13 +32,13 @@
     }
 }
 
-- (void)setupUMeung {
-    //设置umengkey
-    [UMSocialData setAppKey:@"57a5581267e58e2557001639"];
-    [UMSocialSinaSSOHandler openNewSinaSSOWithAppKey:@"2892166685"
-                                              secret:@"7849eb7a9922c4318b1a0cff9a215ff3"
-                                         RedirectURL:@"http://sns.whalecloud.com/sina2/callback"];
-}
+//- (void)setupUMeung {
+//    //设置umengkey
+//    [UMSocialData setAppKey:@"57a5581267e58e2557001639"];
+//    [UMSocialSinaSSOHandler openNewSinaSSOWithAppKey:@"2892166685"
+//                                              secret:@"7849eb7a9922c4318b1a0cff9a215ff3"
+//                                         RedirectURL:@"http://sns.whalecloud.com/sina2/callback"];
+//}
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

@@ -14,12 +14,12 @@ PODS:
   - AFNetworking/Serialization (3.1.0)
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
-  - LFLiveKit (2.0)
-  - Masonry (1.0.1)
+  - LFLiveKit (2.6)
+  - Masonry (1.0.2)
   - MJExtension (3.0.13)
-  - YYKit (1.0.7):
-    - YYKit/no-arc (= 1.0.7)
-  - YYKit/no-arc (1.0.7)
+  - YYKit (1.0.9):
+    - YYKit/no-arc (= 1.0.9)
+  - YYKit/no-arc (1.0.9)
 
 DEPENDENCIES:
   - AFNetworking (~> 3.1.0)
@@ -30,11 +30,11 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
-  LFLiveKit: 2a6cf2411ff06b62237af05f7b94f00681f0ce00
-  Masonry: a1a931a0d08870ed8ae415a2ea5ea68ebcac77df
+  LFLiveKit: 2219563721f8aa0f188effc3395a06e2d53b23f2
+  Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
   MJExtension: 5932755f451458eefa24239358817f8d291240c7
-  YYKit: 843d1b26e20b82c695790c9a89907eaa1e99907f
+  YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
 
 PODFILE CHECKSUM: 62f0bb2ff1cff8ad21d1a899074153114d740d0a
 
-COCOAPODS: 1.1.0.beta.1
+COCOAPODS: 1.3.1
