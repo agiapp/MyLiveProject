@@ -29,8 +29,8 @@
     self.window.rootViewController = tabBarVC;
     [self.window makeKeyAndVisible];
     // 广告视图
-    BRADView *adView = [[BRADView alloc]initWithFrame:SCREEN_BOUNDS];
-    [self.window addSubview:adView];
+    //BRADView *adView = [[BRADView alloc]initWithFrame:SCREEN_BOUNDS];
+    //[self.window addSubview:adView];
     
     [[BRLocationManager sharedBRLocationManager] getGPS:^(NSString *lat, NSString *lon) {
         NSLog(@"当前位置的经纬度：(%@, %@)", lat, lon);
